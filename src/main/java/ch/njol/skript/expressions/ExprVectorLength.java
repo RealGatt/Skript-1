@@ -30,7 +30,7 @@ import ch.njol.skript.lang.ExpressionType;
 
 import org.bukkit.event.Event;
 import org.bukkit.util.Vector;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 /**
  * @author bi0qaw

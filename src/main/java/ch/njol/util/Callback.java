@@ -19,7 +19,7 @@
  */
 package ch.njol.util;
 
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 public interface Callback<R, A> {
 	

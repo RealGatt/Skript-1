@@ -26,7 +26,7 @@ import org.bukkit.event.player.PlayerKickEvent;
 import org.bukkit.event.player.PlayerLoginEvent;
 import org.bukkit.event.player.PlayerLoginEvent.Result;
 import org.bukkit.scheduler.BukkitRunnable;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import ch.njol.skript.Skript;
 import ch.njol.skript.ScriptLoader;

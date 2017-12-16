@@ -39,7 +39,7 @@ import org.bukkit.configuration.serialization.ConfigurationSerializable;
 import org.bukkit.configuration.serialization.ConfigurationSerialization;
 import org.bukkit.event.Event;
 import org.eclipse.jdt.annotation.NonNull;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import ch.njol.skript.Skript;
 import ch.njol.skript.SkriptAPIException;
@@ -81,7 +81,7 @@ public abstract class Variables {
 			@SuppressWarnings("unchecked")
 			private final void init() {
 				// used by asserts
-				info = (ClassInfo<? extends ConfigurationSerializable>) Classes.getExactClassInfo(Object.class);
+				info = (ClassInfo) Classes.getExactClassInfo(Object.class);
 			}
 			
 			@SuppressWarnings({"unchecked"})

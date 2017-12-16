@@ -36,7 +36,7 @@ import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.util.Vector;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import com.bekvon.bukkit.residence.Residence;
 import com.bekvon.bukkit.residence.api.ResidenceApi;

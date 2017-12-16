@@ -30,7 +30,7 @@ import java.util.Random;
 import java.util.Set;
 
 import org.eclipse.jdt.annotation.NonNull;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import ch.njol.util.Pair;
 

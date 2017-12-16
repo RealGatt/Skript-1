@@ -32,7 +32,7 @@ import ch.njol.skript.util.Patterns;
 import ch.njol.util.Kleenean;
 import org.bukkit.event.Event;
 import org.bukkit.util.Vector;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import java.lang.reflect.Array;
 

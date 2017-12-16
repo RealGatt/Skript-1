@@ -30,7 +30,7 @@ import java.util.concurrent.locks.LockSupport;
 
 import org.bukkit.event.EventPriority;
 import org.eclipse.jdt.annotation.NonNull;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import ch.njol.skript.classes.Converter;
 import ch.njol.skript.config.Config;

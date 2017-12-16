@@ -25,8 +25,7 @@ import java.util.NoSuchElementException;
 
 import org.bukkit.block.Block;
 import org.bukkit.event.Event;
-import org.eclipse.jdt.annotation.NonNull;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import ch.njol.skript.Skript;
 import ch.njol.skript.doc.Description;
@@ -78,7 +77,6 @@ public class ExprBlocksInRegion extends SimpleExpression<Block> {
 	}
 	
 	@Override
-	@NonNull
 	public Iterator<Block> iterator(final Event e) {
 		final Region[] rs = regions.getArray(e);
 		if (rs.length == 0)

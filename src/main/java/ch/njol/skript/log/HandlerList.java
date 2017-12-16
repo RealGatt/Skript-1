@@ -22,7 +22,7 @@ package ch.njol.skript.log;
 import java.util.Iterator;
 import java.util.LinkedList;
 
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger

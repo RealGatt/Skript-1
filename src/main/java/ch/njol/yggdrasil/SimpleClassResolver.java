@@ -21,7 +21,7 @@ package ch.njol.yggdrasil;
 
 import javax.annotation.concurrent.NotThreadSafe;
 
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import ch.njol.util.coll.BidiHashMap;
 import ch.njol.util.coll.BidiMap;

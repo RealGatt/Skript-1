@@ -23,7 +23,7 @@ import ch.njol.skript.bukkitutil.BiomeMappings;
 import ch.njol.skript.localization.Language;
 
 import org.bukkit.block.Biome;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger

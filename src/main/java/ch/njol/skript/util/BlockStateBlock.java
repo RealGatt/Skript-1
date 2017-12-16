@@ -36,7 +36,6 @@ import org.bukkit.block.PistonMoveReaction;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.metadata.MetadataValue;
 import org.bukkit.plugin.Plugin;
-import org.eclipse.jdt.annotation.NonNullByDefault;
 
 import ch.njol.skript.Skript;
 
@@ -46,7 +45,6 @@ import ch.njol.skript.Skript;
  * @author Peter Güttinger
  */
 @SuppressWarnings("deprecation")
-@NonNullByDefault(false)
 public class BlockStateBlock implements Block {
 	
 	final BlockState state;

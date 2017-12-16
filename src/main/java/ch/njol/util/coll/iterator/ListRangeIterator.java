@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.NoSuchElementException;
 
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 public class ListRangeIterator<T> implements Iterator<T> {
 	

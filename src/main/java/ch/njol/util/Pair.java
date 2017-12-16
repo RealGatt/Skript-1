@@ -22,7 +22,7 @@ package ch.njol.util;
 import java.io.Serializable;
 import java.util.Map.Entry;
 
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger

@@ -20,7 +20,7 @@
 package ch.njol.skript.hooks.biomes;
 
 import org.bukkit.block.Biome;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 /**
  * Hooks to provide 1.8 support.

@@ -21,7 +21,7 @@
 
 package ch.njol.skript.util.chat;
 
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import ch.njol.skript.lang.VariableString;
 import ch.njol.skript.util.chat.MessageComponent.*;

@@ -25,8 +25,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 
-import org.eclipse.jdt.annotation.NonNull;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import ch.njol.skript.Skript;
 import ch.njol.skript.SkriptAPIException;
@@ -137,7 +136,6 @@ public class SectionNode extends Node implements Iterable<Node> {
 	@Override
 	public Iterator<Node> iterator() {
 		@SuppressWarnings("null")
-		@NonNull
 		final Iterator<Node> iter = nodes.iterator();
 		return new CheckedIterator<Node>(iter, new NullableChecker<Node>() {
 			@Override

@@ -25,7 +25,7 @@ import java.util.logging.Filter;
 import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 public final class LoggerFilter implements Filter, Closeable {
 	private final Logger l;

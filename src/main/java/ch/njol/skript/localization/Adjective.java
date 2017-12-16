@@ -21,7 +21,7 @@ package ch.njol.skript.localization;
 
 import java.util.HashMap;
 
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import ch.njol.skript.Skript;
 

@@ -24,7 +24,7 @@ package ch.njol.skript.util.chat;
 import java.lang.reflect.Type;
 
 import org.bukkit.event.Event;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;

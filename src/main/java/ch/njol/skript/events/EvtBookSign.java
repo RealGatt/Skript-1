@@ -25,7 +25,7 @@ import ch.njol.skript.lang.SkriptEvent;
 import ch.njol.skript.lang.SkriptParser;
 import org.bukkit.event.Event;
 import org.bukkit.event.player.PlayerEditBookEvent;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 public class EvtBookSign extends SkriptEvent{
 	

@@ -46,8 +46,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
@@ -126,7 +125,6 @@ public class Updater {
 	/**
 	 * Github API response for GSON deserialization.
 	 */
-	@NonNullByDefault(value = false)
 	public class ResponseEntry {
 		public String url;
 	    public String assets_url;

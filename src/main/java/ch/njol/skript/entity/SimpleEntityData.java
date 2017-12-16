@@ -92,7 +92,7 @@ import org.bukkit.entity.WitherSkeleton;
 import org.bukkit.entity.WitherSkull;
 import org.bukkit.entity.Zombie;
 import org.bukkit.entity.ZombieHorse;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Literal;

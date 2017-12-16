@@ -29,8 +29,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.util.HashMap;
 
-import org.eclipse.jdt.annotation.NonNull;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import ch.njol.skript.Skript;
 import ch.njol.skript.config.validate.SectionValidator;
@@ -260,7 +259,6 @@ public class Config implements Comparable<Config> {
 					if (OptionSection.class.isAssignableFrom(f.getType())) {
 						final Object p = f.get(o);
 						@SuppressWarnings("null")
-						@NonNull
 						final Class<?> pc = p.getClass();
 						load(pc, p, path + ((OptionSection) p).key + ".");
 					} else if (Option.class.isAssignableFrom(f.getType())) {

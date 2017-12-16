@@ -23,8 +23,6 @@ import java.io.NotSerializableException;
 import java.io.StreamCorruptedException;
 import java.lang.reflect.Field;
 
-import org.eclipse.jdt.annotation.NonNull;
-
 import ch.njol.yggdrasil.Fields.FieldContext;
 
 /**
@@ -52,7 +50,7 @@ public interface YggdrasilSerializable {
 		 *         <tt>yggdrasil.{@link Yggdrasil#incompatibleField(Object, Field, FieldContext) incompatibleField}(this, field, value)</tt> will be called.
 		 */
 		@SuppressWarnings("null")
-		public boolean incompatibleField(@NonNull Field field, @NonNull FieldContext value) throws StreamCorruptedException;
+		public boolean incompatibleField(Field field,FieldContext value) throws StreamCorruptedException;
 		
 		/**
 		 * Called if a field was read from stream which does not exist in this class.
@@ -61,7 +59,7 @@ public interface YggdrasilSerializable {
 		 * @return Whether the field was handled. If false, <tt>yggdrasil.{@link Yggdrasil#excessiveField(Object, FieldContext) excessiveField}(this, field)</tt> will be called.
 		 */
 		@SuppressWarnings("null")
-		public boolean excessiveField(@NonNull FieldContext field) throws StreamCorruptedException;
+		public boolean excessiveField(FieldContext field) throws StreamCorruptedException;
 		
 		/**
 		 * Called if a field was not found in the stream.
@@ -71,7 +69,7 @@ public interface YggdrasilSerializable {
 		 *         <tt>yggdrasil.{@link Yggdrasil#missingField(Object, Field) missingField}(this, field)</tt> will be called.
 		 */
 		@SuppressWarnings("null")
-		public boolean missingField(@NonNull Field field) throws StreamCorruptedException;
+		public boolean missingField(Field field) throws StreamCorruptedException;
 		
 	}
 	
@@ -127,7 +125,7 @@ public interface YggdrasilSerializable {
 		 * @throws NotSerializableException
 		 */
 		@SuppressWarnings("null")
-		public void deserialize(@NonNull Fields fields) throws StreamCorruptedException, NotSerializableException;
+		public void deserialize(Fields fields) throws StreamCorruptedException, NotSerializableException;
 		
 	}
 	

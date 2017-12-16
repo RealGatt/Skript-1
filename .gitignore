@@ -2,6 +2,9 @@
 /dep
 /build/
 /.gradle/
+/out/
 /bin/
 /.idea/
 *.iml
+*.class
+*.jar

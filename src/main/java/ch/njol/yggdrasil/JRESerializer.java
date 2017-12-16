@@ -31,7 +31,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 public class JRESerializer extends YggdrasilSerializer<Object> {
 	

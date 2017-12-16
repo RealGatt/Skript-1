@@ -36,7 +36,7 @@ import javax.xml.soap.Text;
 
 import org.bukkit.event.Event;
 import org.eclipse.jdt.annotation.NonNull;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;

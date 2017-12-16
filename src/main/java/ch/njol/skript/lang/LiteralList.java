@@ -21,7 +21,7 @@ package ch.njol.skript.lang;
 
 import java.lang.reflect.Array;
 
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import ch.njol.skript.lang.util.SimpleLiteral;
 import ch.njol.skript.util.Utils;

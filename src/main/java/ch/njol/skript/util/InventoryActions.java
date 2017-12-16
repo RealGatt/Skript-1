@@ -24,7 +24,7 @@ import java.util.List;
 
 import org.bukkit.block.Biome;
 import org.bukkit.event.inventory.InventoryAction;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import ch.njol.skript.localization.Language;
 import ch.njol.skript.localization.LanguageChangeListener;

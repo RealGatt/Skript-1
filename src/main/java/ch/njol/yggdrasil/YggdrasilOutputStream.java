@@ -28,7 +28,7 @@ import java.io.NotSerializableException;
 import java.lang.reflect.Array;
 import java.util.IdentityHashMap;
 
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import ch.njol.yggdrasil.Fields.FieldContext;
 import ch.njol.yggdrasil.YggdrasilSerializable.YggdrasilExtendedSerializable;

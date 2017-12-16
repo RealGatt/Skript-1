@@ -19,7 +19,7 @@
  */
 package ch.njol.yggdrasil;
 
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 public interface ClassResolver {
 	

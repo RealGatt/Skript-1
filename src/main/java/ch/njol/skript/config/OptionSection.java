@@ -22,7 +22,7 @@ package ch.njol.skript.config;
 import java.lang.reflect.Field;
 import java.util.Locale;
 
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger

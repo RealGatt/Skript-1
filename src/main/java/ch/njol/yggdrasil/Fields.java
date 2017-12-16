@@ -34,7 +34,7 @@ import java.util.Set;
 
 import javax.annotation.concurrent.NotThreadSafe;
 
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import ch.njol.yggdrasil.Fields.FieldContext; // required - wtf
 import ch.njol.yggdrasil.YggdrasilSerializable.YggdrasilRobustSerializable;

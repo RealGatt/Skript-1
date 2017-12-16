@@ -34,7 +34,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import com.bekvon.bukkit.residence.commands.info;
 import com.google.common.base.Joiner;

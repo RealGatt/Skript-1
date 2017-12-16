@@ -22,7 +22,7 @@ package ch.njol.skript.lang.function;
 import java.util.Arrays;
 
 import org.bukkit.Bukkit;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import ch.njol.skript.classes.ClassInfo;
 import ch.njol.util.coll.CollectionUtils;

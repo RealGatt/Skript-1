@@ -29,7 +29,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 import javax.annotation.concurrent.ThreadSafe;
 
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 /**
  * A class that acts as a "pseudo-enum", i.e. a class which only has immutable, (public,) final static instances, which can be identified by their unique name. The instances don't
@@ -128,19 +128,19 @@ public abstract class PseudoEnum<T extends PseudoEnum<T>> {
 	protected final Object clone() throws CloneNotSupportedException {
 		throw new CloneNotSupportedException();
 	}
-	
+
 	/**
 	 * Returns this constant's pseudo-enum class, i.e. the first non-anonymous superclass of this constant. This class is the same for all constants inheriting from a common class
 	 * independently from whether they define an anonymous subclass.
-	 * 
+	 *
 	 * @return This constant's pseudo-enum class.
 	 * @see Enum#getDeclaringClass()
 	 */
-	@SuppressWarnings({"unchecked", "null"})
+
 	public final Class<T> getDeclaringClass() {
-		return getDeclaringClass(getClass());
+		return (Class<T>)getDeclaringClass(getClass());
 	}
-	
+
 	/**
 	 * Returns the common base class for constants of the given type, i.e. the first non-anonymous superclass of <tt>type</tt>.
 	 * 

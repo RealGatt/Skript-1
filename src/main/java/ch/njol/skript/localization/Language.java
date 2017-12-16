@@ -34,7 +34,7 @@ import java.util.Set;
 import java.util.regex.Pattern;
 
 import org.bukkit.plugin.Plugin;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import ch.njol.skript.Skript;
 import ch.njol.skript.SkriptAddon;

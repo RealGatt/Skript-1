@@ -19,7 +19,7 @@
  */
 package ch.njol.skript.variables;
 
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger

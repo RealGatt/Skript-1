@@ -33,7 +33,7 @@ import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.event.Event;
 import org.bukkit.util.Vector;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 /**
  * @author bi0qaw

@@ -34,7 +34,7 @@ import ch.njol.util.Kleenean;
 import org.apache.commons.lang.StringUtils;
 import org.bukkit.event.Event;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 @Name("Chat Format")
 @Description("Can be used to get/retrieve the chat format. The sender of a message is " +

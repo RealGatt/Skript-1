@@ -31,7 +31,7 @@ import org.bukkit.Material;
 import org.bukkit.event.Event;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.BookMeta;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 @Name("Book Title")
 @Description("The title of a book")

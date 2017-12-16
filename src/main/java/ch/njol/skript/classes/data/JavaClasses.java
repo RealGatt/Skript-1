@@ -21,7 +21,7 @@ package ch.njol.skript.classes.data;
 
 import java.io.StreamCorruptedException;
 
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import ch.njol.skript.SkriptConfig;
 import ch.njol.skript.classes.ClassInfo;

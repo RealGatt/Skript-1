@@ -22,7 +22,7 @@ package ch.njol.util.coll.iterator;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import ch.njol.util.NullableChecker;
 

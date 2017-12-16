@@ -26,21 +26,18 @@ import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 
 import org.bukkit.event.Event;
-import org.eclipse.jdt.annotation.NonNull;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import ch.njol.skript.expressions.base.EventValueExpression;
 import ch.njol.skript.lang.Debuggable;
 import ch.njol.skript.lang.DefaultExpression;
 import ch.njol.skript.lang.util.SimpleLiteral;
 import ch.njol.skript.localization.Noun;
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
 /**
  * @author Peter Güttinger
  * @param <T> The class this info is for
  */
-@SuppressFBWarnings("DM_STRING_VOID_CTOR")
 public class ClassInfo<T> implements Debuggable {
 	
 	private final Class<T> c;
@@ -371,7 +368,6 @@ public class ClassInfo<T> implements Debuggable {
 	// === GENERAL ===
 	
 	@Override
-	@NonNull
 	public String toString() {
 		return getName().getSingular();
 	}
@@ -381,7 +377,6 @@ public class ClassInfo<T> implements Debuggable {
 	}
 	
 	@Override
-	@NonNull
 	public String toString(final @Nullable Event e, final boolean debug) {
 		if (debug)
 			return codeName + " (" + c.getCanonicalName() + ")";

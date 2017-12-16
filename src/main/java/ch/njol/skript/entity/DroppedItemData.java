@@ -23,7 +23,7 @@ import java.util.Arrays;
 
 import org.bukkit.entity.Item;
 import org.bukkit.inventory.ItemStack;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import ch.njol.skript.aliases.ItemType;
 import ch.njol.skript.lang.Literal;

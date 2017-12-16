@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.bukkit.event.Event;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import ch.njol.skript.Skript;
 import ch.njol.skript.classes.Converter;

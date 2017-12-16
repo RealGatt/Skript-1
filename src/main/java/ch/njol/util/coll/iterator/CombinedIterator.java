@@ -22,7 +22,7 @@ package ch.njol.util.coll.iterator;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 /**
  * An iterator that iterates over all elements of several iterables.

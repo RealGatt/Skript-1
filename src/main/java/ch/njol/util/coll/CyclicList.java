@@ -23,7 +23,7 @@ import java.lang.reflect.Array;
 import java.util.AbstractList;
 import java.util.Collection;
 
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import ch.njol.util.Math2;
 

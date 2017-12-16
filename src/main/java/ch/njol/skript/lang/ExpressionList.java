@@ -26,7 +26,7 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 import org.bukkit.event.Event;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import ch.njol.skript.classes.Changer.ChangeMode;
 import ch.njol.skript.conditions.CondCompare;

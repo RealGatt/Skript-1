@@ -29,7 +29,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.util.ChatPaginator;
 import org.bukkit.util.ChatPaginator.ChatPage;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import ch.njol.skript.ScriptLoader.ScriptInfo;
 import ch.njol.skript.Updater.UpdateState;
@@ -48,7 +48,6 @@ import ch.njol.skript.util.ExceptionUtils;
 import ch.njol.skript.util.FileUtils;
 import ch.njol.skript.util.Utils;
 import ch.njol.util.StringUtils;
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
 /*
  *   This file is part of Skript.
@@ -147,7 +146,6 @@ public class SkriptCommand implements CommandExecutor {
 	}
 	
 	@Override
-	@SuppressFBWarnings("REC_CATCH_EXCEPTION")
 	public boolean onCommand(final @Nullable CommandSender sender, final @Nullable Command command, final @Nullable String label, final @Nullable String[] args) {
 		if (sender == null || command == null || label == null || args == null)
 			throw new IllegalArgumentException();

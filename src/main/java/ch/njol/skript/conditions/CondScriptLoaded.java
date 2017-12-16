@@ -32,7 +32,7 @@ import ch.njol.skript.lang.SkriptParser;
 import ch.njol.util.Checker;
 import ch.njol.util.Kleenean;
 import org.bukkit.event.Event;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import java.io.File;
 

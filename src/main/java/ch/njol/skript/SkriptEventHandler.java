@@ -38,7 +38,7 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.server.ServerCommandEvent;
 import org.bukkit.plugin.EventExecutor;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import ch.njol.skript.ScriptLoader.ScriptInfo;
 import ch.njol.skript.command.Commands;

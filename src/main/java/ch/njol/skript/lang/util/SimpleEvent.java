@@ -20,7 +20,7 @@
 package ch.njol.skript.lang.util;
 
 import org.bukkit.event.Event;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import ch.njol.skript.SkriptAPIException;
 import ch.njol.skript.lang.Literal;

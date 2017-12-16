@@ -26,7 +26,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import org.bukkit.event.Event;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import ch.njol.skript.ScriptLoader;
 import ch.njol.skript.Skript;

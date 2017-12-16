@@ -28,7 +28,7 @@ import ch.njol.skript.timings.SkriptTimings;
 
 import org.bukkit.Bukkit;
 import org.bukkit.event.Event;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

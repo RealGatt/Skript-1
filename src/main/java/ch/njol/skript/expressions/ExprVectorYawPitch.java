@@ -34,7 +34,7 @@ import ch.njol.util.VectorMath;
 
 import org.bukkit.event.Event;
 import org.bukkit.util.Vector;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 /**
  * @author bi0qaw

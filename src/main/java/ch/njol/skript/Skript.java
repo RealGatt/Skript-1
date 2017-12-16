@@ -64,7 +64,7 @@ import org.bukkit.event.server.ServerCommandEvent;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import ch.njol.skript.Updater.UpdateState;
 import ch.njol.skript.aliases.Aliases;
@@ -236,7 +236,9 @@ public final class Skript extends JavaPlugin implements Listener {
 			return;
 		}
 		
-		
+
+
+
 		ChatMessages.registerListeners();
 		Language.loadDefault(getAddonInstance());
 		
@@ -255,7 +257,9 @@ public final class Skript extends JavaPlugin implements Listener {
 		} else {
 			minecraftVersion = new Version("" + m.group());
 		}
-		
+
+		Skript.info("CUSTOM GATT VERSION LOADED");
+
 		if (!getDataFolder().isDirectory())
 			getDataFolder().mkdirs();
 		

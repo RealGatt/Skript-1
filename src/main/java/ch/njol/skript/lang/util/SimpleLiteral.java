@@ -22,7 +22,7 @@ package ch.njol.skript.lang.util;
 import java.lang.reflect.Array;
 
 import org.bukkit.event.Event;
-import org.eclipse.jdt.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import ch.njol.skript.classes.Changer;
 import ch.njol.skript.classes.Changer.ChangeMode;
