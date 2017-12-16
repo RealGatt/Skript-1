@@ -19,21 +19,20 @@
  */
 package ch.njol.skript.entity;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
-import org.bukkit.Location;
-import org.bukkit.entity.Villager;
-import org.bukkit.entity.Villager.Profession;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Literal;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
 import ch.njol.skript.variables.Variables;
 import ch.njol.util.coll.CollectionUtils;
+import org.bukkit.Location;
+import org.bukkit.entity.Villager;
+import org.bukkit.entity.Villager.Profession;
+
+import javax.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * @author Peter Güttinger
@@ -61,8 +60,7 @@ public class VillagerData extends EntityData<Villager> {
 			
 			professions = new ArrayList<>();
 			for (Profession prof : Profession.values()) {
-				if (!prof.isZombie())
-					professions.add(prof);
+				professions.add(prof);
 			}
 		} else { // Pre 1.10: method Profession#isZombie() doesn't exist
 			register(VillagerData.class, "villager", Villager.class, 0,
@@ -106,9 +104,6 @@ public class VillagerData extends EntityData<Villager> {
 			profession = CollectionUtils.getRandom(professions);
 			v.setProfession(profession);
 		}
-		if (hasNitwit && profession == Profession.NITWIT)
-			v.setRecipes(Collections.emptyList()); // Remove trades from nitwit
-			
 		return v;
 	}
 	

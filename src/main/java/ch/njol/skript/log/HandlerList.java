@@ -19,10 +19,9 @@
  */
 package ch.njol.skript.log;
 
+import javax.annotation.Nullable;
 import java.util.Iterator;
 import java.util.LinkedList;
-
-import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger

@@ -19,53 +19,11 @@
  */
 package ch.njol.skript.classes.data;
 
-import java.io.NotSerializableException;
-import java.io.StreamCorruptedException;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map.Entry;
-import java.util.UUID;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import org.bukkit.Bukkit;
-import org.bukkit.Chunk;
-import org.bukkit.GameMode;
-import org.bukkit.Location;
-import org.bukkit.OfflinePlayer;
-import org.bukkit.World;
-import org.bukkit.block.Biome;
-import org.bukkit.block.Block;
-import org.bukkit.command.CommandSender;
-import org.bukkit.enchantments.Enchantment;
-import org.bukkit.entity.Entity;
-import org.bukkit.entity.Item;
-import org.bukkit.entity.LivingEntity;
-import org.bukkit.entity.Player;
-import org.bukkit.entity.Projectile;
-import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
-import org.bukkit.event.inventory.ClickType;
-import org.bukkit.event.inventory.InventoryAction;
-import org.bukkit.event.inventory.InventoryType;
-import org.bukkit.inventory.Inventory;
-import org.bukkit.inventory.InventoryHolder;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.potion.PotionData;
-import org.bukkit.potion.PotionEffectType;
-import org.bukkit.potion.PotionType;
-import org.bukkit.util.Vector;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.SkriptConfig;
 import ch.njol.skript.aliases.Aliases;
 import ch.njol.skript.aliases.ItemType;
-import ch.njol.skript.classes.ClassInfo;
-import ch.njol.skript.classes.ConfigurationSerializer;
-import ch.njol.skript.classes.EnumSerializer;
-import ch.njol.skript.classes.Parser;
-import ch.njol.skript.classes.Serializer;
+import ch.njol.skript.classes.*;
 import ch.njol.skript.entity.EntityData;
 import ch.njol.skript.expressions.ExprDamageCause;
 import ch.njol.skript.expressions.base.EventValueExpression;
@@ -74,15 +32,34 @@ import ch.njol.skript.lang.util.SimpleLiteral;
 import ch.njol.skript.localization.Language;
 import ch.njol.skript.localization.Message;
 import ch.njol.skript.registrations.Classes;
-import ch.njol.skript.util.BiomeUtils;
-import ch.njol.skript.util.DamageCauseUtils;
-import ch.njol.skript.util.EnchantmentType;
-import ch.njol.skript.util.EnumUtils;
-import ch.njol.skript.util.InventoryActions;
-import ch.njol.skript.util.PotionEffectUtils;
-import ch.njol.skript.util.StringMode;
+import ch.njol.skript.util.*;
 import ch.njol.util.StringUtils;
 import ch.njol.yggdrasil.Fields;
+import org.bukkit.*;
+import org.bukkit.block.Biome;
+import org.bukkit.block.Block;
+import org.bukkit.command.CommandSender;
+import org.bukkit.enchantments.Enchantment;
+import org.bukkit.entity.*;
+import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
+import org.bukkit.event.inventory.ClickType;
+import org.bukkit.event.inventory.InventoryAction;
+import org.bukkit.event.inventory.InventoryType;
+import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.InventoryHolder;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.potion.PotionEffectType;
+import org.bukkit.util.Vector;
+
+import javax.annotation.Nullable;
+import java.io.NotSerializableException;
+import java.io.StreamCorruptedException;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map.Entry;
+import java.util.UUID;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @author Peter Güttinger
@@ -369,27 +346,27 @@ public class BukkitClasses {
 					public Vector parse(final String s, final ParseContext context) {
 						return null;
 					}
-					
+
 					@Override
 					public boolean canParse(final ParseContext context) {
 						return false;
 					}
-					
+
 					@Override
 					public String toString(final Vector vec, final int flags) {
 						return "x: " + Skript.toString(vec.getX()) + ", y: " + Skript.toString(vec.getY()) + ", z: " + Skript.toString(vec.getZ());
 					}
-					
+
 					@Override
 					public String toVariableNameString(final Vector vec) {
 						return "vector:" + vec.getX() + "," + vec.getY() + "," + vec.getZ();
 					}
-					
+
 					@Override
 					public String getVariableNamePattern() {
 						return "\\S:-?\\d+(\\.\\d+)?,-?\\d+(\\.\\d+)?,-?\\d+(\\.\\d+)?";
 					}
-					
+
 					@Override
 					public String getDebugMessage(final Vector vec) {
 						return "(" + vec.getX() + "," + vec.getY() + "," + vec.getZ() + ")";
@@ -410,7 +387,7 @@ public class BukkitClasses {
 					public void deserialize(Vector o, Fields f) throws StreamCorruptedException, NotSerializableException {
 						assert false;
 					}
-					
+
 					@Override
 					public Vector deserialize(final Fields f) throws StreamCorruptedException, NotSerializableException {
 						return new Vector(f.getPrimitive("x", double.class), f.getPrimitive("y", double.class), f.getPrimitive("z", double.class));
@@ -425,7 +402,7 @@ public class BukkitClasses {
 					protected boolean canBeInstantiated() {
 						return false;
 					}
-					
+
 				})
 				);
 		
@@ -611,40 +588,6 @@ public class BukkitClasses {
 					@SuppressWarnings("null")
 					@Override
 					public String toVariableNameString(ClickType o) {
-						return o.name();
-					}
-
-					@Override
-					public String getVariableNamePattern() {
-						return "\\S+";
-					}
-					
-				}));
-		
-		final EnumUtils<InventoryType> invTypes = new EnumUtils<>(InventoryType.class, "inventory types");
-		Classes.registerClass(new ClassInfo<>(InventoryType.class, "inventorytype")
-				.user("inventory types?")
-				.name("Inventory Type")
-				.description("Minecraft has several different inventory types with their own use cases.")
-				.usage(invTypes.getAllNames())
-				.examples("")
-				.since("2.2-dev32")
-				.defaultExpression(new EventValueExpression<>(InventoryType.class))
-				.parser(new Parser<InventoryType>() {
-					@Override
-					@Nullable
-					public InventoryType parse(String s, ParseContext context) {
-						return invTypes.parse(s);
-					}
-
-					@Override
-					public String toString(InventoryType o, int flags) {
-						return invTypes.toString(o, flags);
-					}
-
-					@SuppressWarnings("null")
-					@Override
-					public String toVariableNameString(InventoryType o) {
 						return o.name();
 					}
 

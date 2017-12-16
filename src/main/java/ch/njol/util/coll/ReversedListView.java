@@ -19,15 +19,14 @@
  */
 package ch.njol.util.coll;
 
+import ch.njol.util.coll.iterator.ReversedListIterator;
+
+import javax.annotation.Nullable;
 import java.lang.reflect.Array;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
-
-import javax.annotation.Nullable;
-
-import ch.njol.util.coll.iterator.ReversedListIterator;
 
 /**
  * @author Peter Güttinger

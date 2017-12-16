@@ -19,12 +19,6 @@
  */
 package ch.njol.skript.effects;
 
-import org.bukkit.Location;
-import org.bukkit.SoundCategory;
-import org.bukkit.entity.Player;
-import org.bukkit.event.Event;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.doc.Description;
 import ch.njol.skript.doc.Examples;
@@ -34,6 +28,12 @@ import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
 import ch.njol.util.Kleenean;
+import org.bukkit.Location;
+import org.bukkit.Sound;
+import org.bukkit.entity.Player;
+import org.bukkit.event.Event;
+
+import javax.annotation.Nullable;
 
 @Name("Play Sound")
 @Description("Plays a sound at given location for everyone or just for given players. Playing sounds from resource packs is supported.")
@@ -80,10 +80,10 @@ public class EffPlaySound extends Effect {
 		
 		if (players != null) {
 			for (Player p : players.getAll(e)) {
-				p.playSound(l, s, SoundCategory.MASTER, vol, pi);
+				p.playSound(l, s, vol, pi);
 			}
 		} else {
-			l.getWorld().playSound(l, s, vol, pi);
+			l.getWorld().playSound(l, Sound.valueOf(s), vol, pi);
 		}
 	}
 	

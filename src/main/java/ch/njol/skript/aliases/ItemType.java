@@ -19,38 +19,9 @@
  */
 package ch.njol.skript.aliases;
 
-import java.io.NotSerializableException;
-import java.io.StreamCorruptedException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.NoSuchElementException;
-import java.util.Random;
-import java.util.RandomAccess;
-
-import org.bukkit.Bukkit;
-import org.bukkit.Material;
-import org.bukkit.block.Block;
-import org.bukkit.enchantments.Enchantment;
-import org.bukkit.inventory.Inventory;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.PlayerInventory;
-import org.bukkit.inventory.meta.ItemMeta;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Unit;
-import ch.njol.skript.localization.Adjective;
-import ch.njol.skript.localization.GeneralWords;
-import ch.njol.skript.localization.Language;
-import ch.njol.skript.localization.Message;
-import ch.njol.skript.localization.Noun;
+import ch.njol.skript.localization.*;
 import ch.njol.skript.registrations.Classes;
 import ch.njol.skript.util.BlockUtils;
 import ch.njol.skript.util.Container;
@@ -61,6 +32,20 @@ import ch.njol.util.coll.iterator.EmptyIterable;
 import ch.njol.util.coll.iterator.SingleItemIterable;
 import ch.njol.yggdrasil.Fields;
 import ch.njol.yggdrasil.YggdrasilSerializable.YggdrasilExtendedSerializable;
+import org.bukkit.Bukkit;
+import org.bukkit.Material;
+import org.bukkit.block.Block;
+import org.bukkit.enchantments.Enchantment;
+import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.PlayerInventory;
+import org.bukkit.inventory.meta.ItemMeta;
+
+import javax.annotation.Nullable;
+import java.io.NotSerializableException;
+import java.io.StreamCorruptedException;
+import java.util.*;
+import java.util.Map.Entry;
 
 @ContainerType(ItemStack.class)
 @SuppressWarnings("deprecation")

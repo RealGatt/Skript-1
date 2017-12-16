@@ -34,6 +34,7 @@ import ch.njol.util.Kleenean;
 import org.apache.commons.lang.StringUtils;
 import org.bukkit.event.Event;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
+
 import javax.annotation.Nullable;
 
 @Name("Chat Format")

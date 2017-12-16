@@ -19,12 +19,11 @@
  */
 package ch.njol.skript.config;
 
-import java.util.Locale;
-
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.classes.Converter;
+
+import javax.annotation.Nullable;
+import java.util.Locale;
 
 /**
  * @author Peter Güttinger

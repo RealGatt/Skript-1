@@ -21,41 +21,16 @@
 
 package ch.njol.skript.util.chat;
 
-import java.io.NotSerializableException;
-import java.io.StreamCorruptedException;
-import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.regex.Pattern;
-
-import javax.xml.soap.Text;
-
-import org.bukkit.event.Event;
-import org.eclipse.jdt.annotation.NonNull;
-import javax.annotation.Nullable;
-
-import com.google.common.reflect.TypeToken;
+import ch.njol.skript.Skript;
+import ch.njol.skript.localization.Language;
+import ch.njol.skript.localization.LanguageChangeListener;
+import ch.njol.skript.util.Color;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import ch.njol.skript.Skript;
-import ch.njol.skript.classes.ClassInfo;
-import ch.njol.skript.classes.Converter;
-import ch.njol.skript.classes.Serializer;
-import ch.njol.skript.lang.Debuggable;
-import ch.njol.skript.lang.VariableString;
-import ch.njol.skript.localization.Language;
-import ch.njol.skript.localization.LanguageChangeListener;
-import ch.njol.skript.localization.Message;
-import ch.njol.skript.registrations.Classes;
-import ch.njol.skript.registrations.Converters;
-import ch.njol.skript.util.Color;
-import ch.njol.yggdrasil.Fields;
-import edu.umd.cs.findbugs.ba.bcp.New;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.regex.Pattern;
 
 /**
  * Handles parsing chat messages.

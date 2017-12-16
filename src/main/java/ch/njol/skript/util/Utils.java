@@ -19,21 +19,6 @@
  */
 package ch.njol.skript.util;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import org.bukkit.ChatColor;
-import org.bukkit.entity.Creature;
-import org.bukkit.entity.Entity;
-import org.bukkit.entity.LivingEntity;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.util.Vector;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.aliases.ItemType;
 import ch.njol.skript.effects.EffTeleport;
 import ch.njol.skript.entity.EntityData;
@@ -44,6 +29,20 @@ import ch.njol.util.Callback;
 import ch.njol.util.NonNullPair;
 import ch.njol.util.Pair;
 import ch.njol.util.StringUtils;
+import org.bukkit.ChatColor;
+import org.bukkit.entity.Creature;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.LivingEntity;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.util.Vector;
+
+import javax.annotation.Nullable;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Utility class.

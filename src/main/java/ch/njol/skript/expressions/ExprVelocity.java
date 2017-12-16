@@ -19,23 +19,17 @@
  */
 package ch.njol.skript.expressions;
 
-import org.bukkit.entity.Entity;
-import org.bukkit.event.Event;
-import org.bukkit.util.Vector;
-import javax.annotation.Nullable;
-
-import ch.njol.skript.Skript;
 import ch.njol.skript.classes.Changer;
-import ch.njol.skript.classes.Changer.ChangeMode;
 import ch.njol.skript.doc.Description;
 import ch.njol.skript.doc.Examples;
 import ch.njol.skript.doc.Name;
 import ch.njol.skript.doc.Since;
 import ch.njol.skript.expressions.base.SimplePropertyExpression;
-import ch.njol.skript.lang.Expression;
-import ch.njol.skript.lang.ExpressionType;
-import ch.njol.skript.lang.SkriptParser;
-import ch.njol.util.Kleenean;
+import org.bukkit.entity.Entity;
+import org.bukkit.event.Event;
+import org.bukkit.util.Vector;
+
+import javax.annotation.Nullable;
 
 /**
  * @author Sashie

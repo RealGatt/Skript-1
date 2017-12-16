@@ -19,9 +19,9 @@
  */
 package ch.njol.skript.classes;
 
-import javax.annotation.Nullable;
-
 import ch.njol.skript.registrations.Converters;
+
+import javax.annotation.Nullable;
 
 /**
  * used to convert data from one type to another.

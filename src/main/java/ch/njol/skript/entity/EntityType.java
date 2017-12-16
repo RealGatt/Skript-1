@@ -19,9 +19,6 @@
  */
 package ch.njol.skript.entity;
 
-import org.bukkit.entity.Entity;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.classes.ClassInfo;
 import ch.njol.skript.classes.Parser;
 import ch.njol.skript.classes.YggdrasilSerializer;
@@ -31,6 +28,9 @@ import ch.njol.skript.localization.Language;
 import ch.njol.skript.registrations.Classes;
 import ch.njol.skript.util.Utils;
 import ch.njol.yggdrasil.YggdrasilSerializable;
+import org.bukkit.entity.Entity;
+
+import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger

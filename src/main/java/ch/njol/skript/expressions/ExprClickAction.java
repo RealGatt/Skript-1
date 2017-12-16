@@ -19,11 +19,6 @@
  */
 package ch.njol.skript.expressions;
 
-import org.bukkit.event.Event;
-import org.bukkit.event.inventory.ClickType;
-import org.bukkit.event.inventory.InventoryAction;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.doc.Description;
 import ch.njol.skript.doc.Examples;
@@ -31,6 +26,10 @@ import ch.njol.skript.doc.Name;
 import ch.njol.skript.doc.Since;
 import ch.njol.skript.expressions.base.EventValueExpression;
 import ch.njol.skript.lang.ExpressionType;
+import org.bukkit.event.Event;
+import org.bukkit.event.inventory.ClickType;
+
+import javax.annotation.Nullable;
 
 @Name("Click Action")
 @Description("The <a href='../classes/#inventoryaction'>click action</a> of an inventory event. Please click on the link for more information.")

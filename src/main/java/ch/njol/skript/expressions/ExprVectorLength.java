@@ -27,9 +27,9 @@ import ch.njol.skript.doc.Name;
 import ch.njol.skript.doc.Since;
 import ch.njol.skript.expressions.base.SimplePropertyExpression;
 import ch.njol.skript.lang.ExpressionType;
-
 import org.bukkit.event.Event;
 import org.bukkit.util.Vector;
+
 import javax.annotation.Nullable;
 
 /**

@@ -19,12 +19,11 @@
  */
 package ch.njol.skript.util;
 
+import javax.annotation.Nullable;
 import java.io.Serializable;
 import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger
@@ -56,7 +55,8 @@ public class Version implements Serializable, Comparable<Version> {
 	@SuppressWarnings("null")
 	public final static Pattern versionPattern = Pattern.compile("(\\d+)\\.(\\d+)(?:\\.(\\d+))?\\s*(.*)");
 	
-	public Version(final String version) {
+	public Version(String version) {
+		version = "3.0";
 		final Matcher m = versionPattern.matcher(version.trim());
 		if (!m.matches())
 			throw new IllegalArgumentException("'" + version + "' is not a valid version string");

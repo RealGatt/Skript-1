@@ -19,16 +19,6 @@
  */
 package ch.njol.skript.effects;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.List;
-
-import org.bukkit.command.CommandSender;
-import org.bukkit.conversations.Conversable;
-import org.bukkit.entity.Player;
-import org.bukkit.event.Event;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.doc.Description;
 import ch.njol.skript.doc.Examples;
@@ -39,11 +29,16 @@ import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
 import ch.njol.skript.lang.VariableString;
 import ch.njol.skript.util.chat.BungeeConverter;
-import ch.njol.skript.util.chat.ChatMessages;
 import ch.njol.skript.util.chat.MessageComponent;
 import ch.njol.util.Kleenean;
 import net.md_5.bungee.api.chat.BaseComponent;
-import net.md_5.bungee.chat.ComponentSerializer;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.HumanEntity;
+import org.bukkit.entity.Player;
+import org.bukkit.event.Event;
+
+import javax.annotation.Nullable;
+import java.util.List;
 
 /**
  * @author Peter Güttinger
@@ -88,7 +83,7 @@ public class EffMessage extends Effect {
 			BaseComponent[] components = BungeeConverter.convert(componentList.toArray(new MessageComponent[componentList.size()]));
 			for (final CommandSender s : recipients.getArray(e)) {
 				if (s instanceof Player) { // Use JSON chat
-					((Player) s).spigot().sendMessage(components);
+					((Player) s).sendRawMessage(components.toString());
 				} else { // Fall back to non-JSON chat
 					assert messages != null;
 					s.sendMessage(messages.getSingle(e));

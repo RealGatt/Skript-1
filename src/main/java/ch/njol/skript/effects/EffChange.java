@@ -19,12 +19,6 @@
  */
 package ch.njol.skript.effects;
 
-import java.util.Arrays;
-import java.util.logging.Level;
-
-import org.bukkit.event.Event;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.SkriptConfig;
 import ch.njol.skript.classes.Changer;
@@ -47,6 +41,11 @@ import ch.njol.skript.registrations.Classes;
 import ch.njol.skript.util.Patterns;
 import ch.njol.skript.util.Utils;
 import ch.njol.util.Kleenean;
+import org.bukkit.event.Event;
+
+import javax.annotation.Nullable;
+import java.util.Arrays;
+import java.util.logging.Level;
 
 /**
  * @author Peter Güttinger

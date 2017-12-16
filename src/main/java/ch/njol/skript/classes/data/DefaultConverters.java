@@ -19,8 +19,13 @@
  */
 package ch.njol.skript.classes.data;
 
-import java.util.Collection;
-
+import ch.njol.skript.aliases.ItemType;
+import ch.njol.skript.classes.Converter;
+import ch.njol.skript.entity.EntityData;
+import ch.njol.skript.entity.EntityType;
+import ch.njol.skript.entity.XpOrbData;
+import ch.njol.skript.registrations.Converters;
+import ch.njol.skript.util.*;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.OfflinePlayer;
@@ -36,20 +41,8 @@ import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.util.Vector;
-import javax.annotation.Nullable;
 
-import ch.njol.skript.aliases.ItemType;
-import ch.njol.skript.bukkitutil.PlayerUtils;
-import ch.njol.skript.classes.Converter;
-import ch.njol.skript.entity.EntityData;
-import ch.njol.skript.entity.EntityType;
-import ch.njol.skript.entity.XpOrbData;
-import ch.njol.skript.registrations.Converters;
-import ch.njol.skript.util.BlockUtils;
-import ch.njol.skript.util.Direction;
-import ch.njol.skript.util.EnchantmentType;
-import ch.njol.skript.util.Experience;
-import ch.njol.skript.util.Slot;
+import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger

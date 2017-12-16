@@ -22,6 +22,7 @@ package ch.njol.skript.command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
+
 import javax.annotation.Nullable;
 
 /**

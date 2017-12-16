@@ -20,9 +20,8 @@
 package ch.njol.skript.util;
 
 import ch.njol.skript.bukkitutil.BiomeMappings;
-import ch.njol.skript.localization.Language;
-
 import org.bukkit.block.Biome;
+
 import javax.annotation.Nullable;
 
 /**

@@ -19,14 +19,6 @@
  */
 package ch.njol.skript.effects;
 
-import org.bukkit.Material;
-import org.bukkit.event.Event;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.LeatherArmorMeta;
-import org.bukkit.inventory.meta.MapMeta;
-import org.bukkit.inventory.meta.PotionMeta;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.classes.Changer.ChangeMode;
 import ch.njol.skript.classes.Changer.ChangerUtils;
@@ -41,6 +33,14 @@ import ch.njol.skript.util.Color;
 import ch.njol.skript.util.Slot;
 import ch.njol.util.Kleenean;
 import ch.njol.util.Math2;
+import org.bukkit.Material;
+import org.bukkit.event.Event;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.LeatherArmorMeta;
+import org.bukkit.inventory.meta.MapMeta;
+import org.bukkit.inventory.meta.PotionMeta;
+
+import javax.annotation.Nullable;
 
 @Name("Colour Items")
 @Description("Colours items in a given <a href='classes.html#color'>colour</a>. " +
@@ -120,16 +120,6 @@ public class EffColorArmor extends Effect {
 				final LeatherArmorMeta m = (LeatherArmorMeta) i.getItemMeta();
 				m.setColor(c);
 				i.setItemMeta(m);
-			} else if (potionColors) {
-				if (i.getType() == Material.MAP) {
-					final MapMeta m = (MapMeta) i.getItemMeta();
-					m.setColor(c);
-					i.setItemMeta(m);
-				} else if (i.getType() == Material.POTION || i.getType() == Material.SPLASH_POTION || i.getType() == Material.LINGERING_POTION) {
-					final PotionMeta m = (PotionMeta) i.getItemMeta();
-					m.setColor(c);
-					i.setItemMeta(m);
-				}
 			}
 			if (o instanceof Slot) {
 				((Slot) o).setItem(i);

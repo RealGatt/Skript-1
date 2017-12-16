@@ -19,6 +19,24 @@
  */
 package ch.njol.skript.aliases;
 
+import ch.njol.skript.ScriptLoader;
+import ch.njol.skript.Skript;
+import ch.njol.skript.config.Config;
+import ch.njol.skript.config.EntryNode;
+import ch.njol.skript.config.Node;
+import ch.njol.skript.config.SectionNode;
+import ch.njol.skript.config.validate.SectionValidator;
+import ch.njol.skript.localization.*;
+import ch.njol.skript.log.BlockingLogHandler;
+import ch.njol.skript.log.SkriptLogger;
+import ch.njol.skript.util.EnchantmentType;
+import ch.njol.skript.util.Utils;
+import ch.njol.util.NonNullPair;
+import ch.njol.util.Setter;
+import org.bukkit.Material;
+import org.bukkit.enchantments.Enchantment;
+
+import javax.annotation.Nullable;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -28,31 +46,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import org.bukkit.Material;
-import org.bukkit.enchantments.Enchantment;
-import org.bukkit.inventory.ItemStack;
-import javax.annotation.Nullable;
-
-import ch.njol.skript.ScriptLoader;
-import ch.njol.skript.Skript;
-import ch.njol.skript.config.Config;
-import ch.njol.skript.config.EntryNode;
-import ch.njol.skript.config.Node;
-import ch.njol.skript.config.SectionNode;
-import ch.njol.skript.config.validate.SectionValidator;
-import ch.njol.skript.localization.ArgsMessage;
-import ch.njol.skript.localization.Language;
-import ch.njol.skript.localization.Message;
-import ch.njol.skript.localization.Noun;
-import ch.njol.skript.localization.RegexMessage;
-import ch.njol.skript.log.BlockingLogHandler;
-import ch.njol.skript.log.SkriptLogger;
-import ch.njol.skript.util.EnchantmentType;
-import ch.njol.skript.util.PotionEffectUtils;
-import ch.njol.skript.util.Utils;
-import ch.njol.util.NonNullPair;
-import ch.njol.util.Setter;
 
 /**
  * FIXME rename

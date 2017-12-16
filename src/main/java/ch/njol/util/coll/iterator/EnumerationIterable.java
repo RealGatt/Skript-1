@@ -19,10 +19,9 @@
  */
 package ch.njol.util.coll.iterator;
 
+import javax.annotation.Nullable;
 import java.util.Enumeration;
 import java.util.Iterator;
-
-import javax.annotation.Nullable;
 
 /**
  * TODO this should actually only be an Iterator

@@ -19,13 +19,12 @@
  */
 package ch.njol.skript.lang;
 
-import java.io.File;
-
-import org.bukkit.event.Event;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.util.StringUtils;
+import org.bukkit.event.Event;
+
+import javax.annotation.Nullable;
+import java.io.File;
 
 /**
  * Represents a trigger item, i.e. a trigger section, a condition or an effect.

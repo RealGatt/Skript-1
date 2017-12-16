@@ -19,13 +19,13 @@
  */
 package ch.njol.skript.bukkitutil;
 
-import org.bukkit.block.Biome;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.hooks.biomes.BiomeHook;
 import ch.njol.skript.hooks.biomes.BiomeMapUtil.To19Mapping;
 import ch.njol.skript.util.EnumUtils;
+import org.bukkit.block.Biome;
+
+import javax.annotation.Nullable;
 
 /**
  * 1.8 to 1.9 biome name mappings. 1.9 names make no sense.

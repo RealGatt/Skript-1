@@ -20,6 +20,7 @@
 package ch.njol.skript.lang;
 
 import org.bukkit.event.Event;
+
 import javax.annotation.Nullable;
 
 /**

@@ -19,30 +19,21 @@
  */
 package ch.njol.yggdrasil;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.NotSerializableException;
-import java.io.OutputStream;
-import java.io.StreamCorruptedException;
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.annotation.concurrent.NotThreadSafe;
-
-import javax.annotation.Nullable;
-
 import ch.njol.yggdrasil.Fields.FieldContext;
 import ch.njol.yggdrasil.YggdrasilSerializable.YggdrasilExtendedSerializable;
 import ch.njol.yggdrasil.YggdrasilSerializable.YggdrasilRobustEnum;
 import ch.njol.yggdrasil.YggdrasilSerializable.YggdrasilRobustSerializable;
 import ch.njol.yggdrasil.xml.YggXMLInputStream;
 import ch.njol.yggdrasil.xml.YggXMLOutputStream;
+
+import javax.annotation.Nullable;
+import javax.annotation.concurrent.NotThreadSafe;
+import java.io.*;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Yggdrasil is a simple data format to store object graphs.

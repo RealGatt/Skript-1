@@ -19,15 +19,14 @@
  */
 package ch.njol.skript.classes;
 
-import java.io.NotSerializableException;
-import java.io.StreamCorruptedException;
-
+import ch.njol.yggdrasil.Fields;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.configuration.serialization.ConfigurationSerializable;
-import javax.annotation.Nullable;
 
-import ch.njol.yggdrasil.Fields;
+import javax.annotation.Nullable;
+import java.io.NotSerializableException;
+import java.io.StreamCorruptedException;
 
 /**
  * Uses strings for serialisation because the whole ConfigurationSerializable interface is badly documented, and especially DelegateDeserialization doesn't work well with

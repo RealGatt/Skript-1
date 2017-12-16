@@ -19,10 +19,6 @@
  */
 package ch.njol.skript.expressions;
 
-import org.bukkit.event.Cancellable;
-import org.bukkit.event.Event;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.classes.Changer.ChangeMode;
 import ch.njol.skript.doc.NoDoc;
@@ -32,6 +28,10 @@ import ch.njol.skript.lang.SkriptParser.ParseResult;
 import ch.njol.skript.lang.util.SimpleExpression;
 import ch.njol.util.Kleenean;
 import ch.njol.util.coll.CollectionUtils;
+import org.bukkit.event.Cancellable;
+import org.bukkit.event.Event;
+
+import javax.annotation.Nullable;
 
 /**
  * TODO actually allow to have triggers execute for cancelled events

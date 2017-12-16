@@ -20,6 +20,7 @@
 package ch.njol.skript.util;
 
 import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
+
 import javax.annotation.Nullable;
 
 /**

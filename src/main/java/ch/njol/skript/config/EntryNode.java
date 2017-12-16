@@ -19,9 +19,8 @@
  */
 package ch.njol.skript.config;
 
-import java.util.Map.Entry;
-
 import javax.annotation.Nullable;
+import java.util.Map.Entry;
 
 /**
  * @author Peter Güttinger

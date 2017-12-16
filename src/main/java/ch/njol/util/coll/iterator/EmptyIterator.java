@@ -19,10 +19,9 @@
  */
 package ch.njol.util.coll.iterator;
 
+import javax.annotation.Nullable;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-
-import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger

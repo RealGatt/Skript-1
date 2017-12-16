@@ -19,10 +19,7 @@
  */
 package ch.njol.skript.lang.function;
 
-import javax.annotation.Nullable;
-
 import ch.njol.skript.ScriptLoader;
-import ch.njol.skript.Skript;
 import ch.njol.skript.classes.ClassInfo;
 import ch.njol.skript.config.SectionNode;
 import ch.njol.skript.effects.EffReturn;
@@ -31,6 +28,8 @@ import ch.njol.skript.lang.function.Functions.FunctionData;
 import ch.njol.skript.lang.util.SimpleEvent;
 import ch.njol.skript.variables.Variables;
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+
+import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger

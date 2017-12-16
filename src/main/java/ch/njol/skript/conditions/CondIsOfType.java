@@ -19,10 +19,6 @@
  */
 package ch.njol.skript.conditions;
 
-import org.bukkit.entity.Entity;
-import org.bukkit.event.Event;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.aliases.ItemType;
 import ch.njol.skript.classes.Comparator.Relation;
@@ -37,6 +33,10 @@ import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
 import ch.njol.util.Checker;
 import ch.njol.util.Kleenean;
+import org.bukkit.entity.Entity;
+import org.bukkit.event.Event;
+
+import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger

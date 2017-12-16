@@ -19,10 +19,18 @@
  */
 package ch.njol.skript.events;
 
-import java.util.Arrays;
-
-import org.bukkit.Bukkit;
-import org.bukkit.GameMode;
+import ch.njol.skript.Skript;
+import ch.njol.skript.aliases.ItemType;
+import ch.njol.skript.bukkitutil.PlayerUtils;
+import ch.njol.skript.classes.Comparator.Relation;
+import ch.njol.skript.classes.data.DefaultComparators;
+import ch.njol.skript.entity.EntityData;
+import ch.njol.skript.lang.Literal;
+import ch.njol.skript.lang.SkriptEvent;
+import ch.njol.skript.lang.SkriptParser.ParseResult;
+import ch.njol.skript.log.ErrorQuality;
+import ch.njol.util.Checker;
+import ch.njol.util.coll.CollectionUtils;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Entity;
@@ -37,20 +45,8 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
-import javax.annotation.Nullable;
 
-import ch.njol.skript.Skript;
-import ch.njol.skript.aliases.ItemType;
-import ch.njol.skript.bukkitutil.PlayerUtils;
-import ch.njol.skript.classes.Comparator.Relation;
-import ch.njol.skript.classes.data.DefaultComparators;
-import ch.njol.skript.entity.EntityData;
-import ch.njol.skript.lang.Literal;
-import ch.njol.skript.lang.SkriptEvent;
-import ch.njol.skript.lang.SkriptParser.ParseResult;
-import ch.njol.skript.log.ErrorQuality;
-import ch.njol.util.Checker;
-import ch.njol.util.coll.CollectionUtils;
+import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger
@@ -135,9 +131,6 @@ public class EvtClick extends SkriptEvent {
 				boolean useOffHand = checkUseOffHand(player, click, null, clickEvent.getRightClicked());
 				//Skript.info("useOffHand: " + useOffHand);
 				//Skript.info("Event hand: " + clickEvent.getHand());
-				if ((useOffHand && clickEvent.getHand() == EquipmentSlot.HAND) || (!useOffHand && clickEvent.getHand() == EquipmentSlot.OFF_HAND)) {
-					return false;
-				}
 			}
 			
 			if (click == LEFT || types == null) // types == null  will be handled by the PlayerInteractEvent that is fired as well
@@ -155,9 +148,6 @@ public class EvtClick extends SkriptEvent {
 				boolean useOffHand = checkUseOffHand(player, click, clickEvent.getClickedBlock(), null);
 				//Skript.info("useOffHand: " + useOffHand);
 				//Skript.info("Event hand: " + clickEvent.getHand());
-				if ((useOffHand && clickEvent.getHand() == EquipmentSlot.HAND) || (!useOffHand && clickEvent.getHand() == EquipmentSlot.OFF_HAND)) {
-					return false;
-				}
 			}
 			
 			final Action a = clickEvent.getAction();
@@ -189,7 +179,7 @@ public class EvtClick extends SkriptEvent {
 			public boolean check(final ItemType t) {
 				if (isHolding && twoHanded) {
 					PlayerInventory invi = ((PlayerInteractEvent) e).getPlayer().getInventory();
-					return t.isOfType(invi.getItemInMainHand()) || t.isOfType(invi.getItemInOffHand());
+					return true;
 				} else {
 					return t.isOfType(((PlayerInteractEvent) e).getItem());
 				}
@@ -223,56 +213,19 @@ public class EvtClick extends SkriptEvent {
 		
 		boolean mainUsable = false; // Usable item
 		boolean offUsable = false;
-		ItemStack mainHand = player.getInventory().getItemInMainHand();
-		ItemStack offHand = player.getInventory().getItemInOffHand();
+		ItemStack mainHand = player.getInventory().getItemInHand();
 		
 		Material mainMat = mainHand.getType();
-		Material offMat = offHand.getType();
 		assert mainMat != null;
-		assert offMat != null;
 		
 		//Skript.info("block is " + block);
 		//Skript.info("entity is " + entity);
 		
-		switch (offHand.getType()) {
-			case BOW:
-			case EGG:
-			case SPLASH_POTION:
-			case SNOW_BALL:
-			case BUCKET:
-			case FISHING_ROD:
-			case FLINT_AND_STEEL:
-			case WOOD_HOE:
-			case STONE_HOE:
-			case IRON_HOE:
-			case GOLD_HOE:
-			case DIAMOND_HOE:
-			case LEASH:
-			case SHEARS:
-			case WOOD_SPADE:
-			case STONE_SPADE:
-			case IRON_SPADE:
-			case GOLD_SPADE:
-			case DIAMOND_SPADE:
-			case SHIELD:
-			case ENDER_PEARL:
-			case MONSTER_EGG:
-				offUsable = true;
-				break;
-				//$CASES-OMITTED$
-			default:
-				offUsable = false;
-		}
-		
-		// Seriously? Empty hand -> block in hand, since id of AIR < 256 :O
-		if ((offMat.isBlock() && offMat != Material.AIR) || PlayerUtils.canEat(player, offMat)) {
-			offUsable = true;
-		}
+
 		
 		switch (mainHand.getType()) {
 			case BOW:
 			case EGG:
-			case SPLASH_POTION:
 			case SNOW_BALL:
 			case BUCKET:
 			case FISHING_ROD:
@@ -376,7 +329,6 @@ public class EvtClick extends SkriptEvent {
 		if (blockUsable) { // Special behavior
 			if (isSneaking) {
 				//Skript.info("Is sneaking on usable block!");
-				if (offHand.getType() != Material.AIR) return false;
 				if (mainHand.getType() != Material.AIR) return true;
 				//Skript.info("Sneak checks didn't pass.");
 			} else { // When not sneaking, main hand is ALWAYS used
@@ -394,7 +346,6 @@ public class EvtClick extends SkriptEvent {
 		// Still not returned?
 		if (mainHand.getType() != Material.AIR) return false;
 		//Skript.info("Main hand is not item.");
-		if (offHand.getType() != Material.AIR) return true;
 		
 		//Skript.info("Final return!");
 		return false; // Both hands are AIR material!

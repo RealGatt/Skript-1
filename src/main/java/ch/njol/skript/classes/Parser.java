@@ -19,12 +19,12 @@
  */
 package ch.njol.skript.classes;
 
-import javax.annotation.Nullable;
-
 import ch.njol.skript.lang.ParseContext;
 import ch.njol.skript.lang.parser.ParserInstance;
 import ch.njol.skript.registrations.Classes;
 import ch.njol.skript.util.StringMode;
+
+import javax.annotation.Nullable;
 
 /**
  * A parser used to parse data from a string or turn data into a string.

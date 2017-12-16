@@ -19,15 +19,6 @@
  */
 package ch.njol.skript.expressions;
 
-import org.bukkit.block.Block;
-import org.bukkit.block.BlockFace;
-import org.bukkit.entity.LivingEntity;
-import org.bukkit.event.Event;
-import org.bukkit.material.Directional;
-import org.bukkit.material.MaterialData;
-import org.bukkit.util.Vector;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.classes.Changer.ChangeMode;
 import ch.njol.skript.doc.Description;
 import ch.njol.skript.doc.Examples;
@@ -39,6 +30,15 @@ import ch.njol.skript.lang.SkriptParser.ParseResult;
 import ch.njol.skript.util.Direction;
 import ch.njol.util.Kleenean;
 import ch.njol.util.coll.CollectionUtils;
+import org.bukkit.block.Block;
+import org.bukkit.block.BlockFace;
+import org.bukkit.entity.LivingEntity;
+import org.bukkit.event.Event;
+import org.bukkit.material.Directional;
+import org.bukkit.material.MaterialData;
+import org.bukkit.util.Vector;
+
+import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger

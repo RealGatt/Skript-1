@@ -19,25 +19,16 @@
  */
 package ch.njol.yggdrasil;
 
+import ch.njol.yggdrasil.Fields.FieldContext;
+import ch.njol.yggdrasil.YggdrasilSerializable.YggdrasilRobustSerializable;
+
+import javax.annotation.Nullable;
+import javax.annotation.concurrent.NotThreadSafe;
 import java.io.NotSerializableException;
 import java.io.StreamCorruptedException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
-
-import javax.annotation.concurrent.NotThreadSafe;
-
-import javax.annotation.Nullable;
-
-import ch.njol.yggdrasil.Fields.FieldContext; // required - wtf
-import ch.njol.yggdrasil.YggdrasilSerializable.YggdrasilRobustSerializable;
+import java.util.*;
 
 @NotThreadSafe
 public final class Fields implements Iterable<FieldContext> {

@@ -19,10 +19,9 @@
  */
 package ch.njol.util;
 
+import javax.annotation.Nullable;
 import java.io.Serializable;
 import java.util.Map.Entry;
-
-import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger

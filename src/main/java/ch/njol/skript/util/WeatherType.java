@@ -19,17 +19,16 @@
  */
 package ch.njol.skript.util;
 
-import java.util.HashMap;
-import java.util.Map;
-
+import ch.njol.skript.localization.Language;
+import ch.njol.skript.localization.LanguageChangeListener;
 import org.bukkit.World;
 import org.bukkit.event.weather.ThunderChangeEvent;
 import org.bukkit.event.weather.WeatherChangeEvent;
 import org.bukkit.event.weather.WeatherEvent;
-import javax.annotation.Nullable;
 
-import ch.njol.skript.localization.Language;
-import ch.njol.skript.localization.LanguageChangeListener;
+import javax.annotation.Nullable;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author Peter Güttinger

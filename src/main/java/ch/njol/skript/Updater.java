@@ -19,15 +19,23 @@
  */
 package ch.njol.skript;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
+import ch.njol.skript.localization.FormattedMessage;
+import ch.njol.skript.localization.Message;
+import ch.njol.skript.util.ExceptionUtils;
+import ch.njol.skript.util.Task;
+import com.google.common.reflect.TypeToken;
+import com.google.gson.Gson;
+import org.bukkit.Bukkit;
+import org.bukkit.command.CommandSender;
+import org.bukkit.plugin.Plugin;
+
+import javax.annotation.Nullable;
+import javax.xml.bind.DatatypeConverter;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.net.MalformedURLException;
 import java.net.SocketTimeoutException;
 import java.net.URL;
-import java.net.URLConnection;
 import java.nio.channels.Channels;
 import java.nio.channels.FileChannel;
 import java.nio.channels.ReadableByteChannel;
@@ -35,28 +43,9 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicReference;
-
-import javax.xml.bind.DatatypeConverter;
-
-import org.bukkit.Bukkit;
-import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
-import org.bukkit.plugin.Plugin;
-import javax.annotation.Nullable;
-
-import com.google.common.reflect.TypeToken;
-import com.google.gson.Gson;
-
-import ch.njol.skript.Updater.ResponseEntry;
-import ch.njol.skript.localization.FormattedMessage;
-import ch.njol.skript.localization.Message;
-import ch.njol.skript.util.ExceptionUtils;
-import ch.njol.skript.util.Task;
-import ch.njol.skript.util.Version;
 
 /**
  * Skript's new updater, which uses Github API.

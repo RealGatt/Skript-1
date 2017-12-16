@@ -21,21 +21,13 @@
 
 package ch.njol.skript.util.chat;
 
-import java.lang.reflect.Type;
-
-import org.bukkit.event.Event;
-import javax.annotation.Nullable;
-
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
-import com.google.gson.JsonParseException;
 import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 
-import ch.njol.skript.Skript;
-import ch.njol.skript.lang.VariableString;
+import javax.annotation.Nullable;
+import java.lang.reflect.Type;
 
 /**
  * Component for chat messages. This can be serialized with GSON and then

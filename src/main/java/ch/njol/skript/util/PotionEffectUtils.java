@@ -19,22 +19,17 @@
  */
 package ch.njol.skript.util;
 
-import java.util.HashMap;
-import java.util.Map;
-
+import ch.njol.skript.localization.Language;
+import ch.njol.skript.localization.LanguageChangeListener;
 import org.bukkit.entity.ThrownPotion;
-import org.bukkit.inventory.meta.PotionMeta;
 import org.bukkit.potion.Potion;
-import org.bukkit.potion.PotionData;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.potion.PotionType;
-import org.eclipse.jdt.annotation.NonNull;
-import javax.annotation.Nullable;
 
-import ch.njol.skript.aliases.ItemType;
-import ch.njol.skript.localization.Language;
-import ch.njol.skript.localization.LanguageChangeListener;
+import javax.annotation.Nullable;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author Peter Güttinger
@@ -115,12 +110,6 @@ public abstract class PotionEffectUtils {
 	public static PotionType checkPotionType(String name) {
 		switch (name) {
 			case "uncraftable":
-			case "empty":
-				return PotionType.UNCRAFTABLE;
-			case "mundane":
-				return PotionType.MUNDANE;
-			case "thick":
-				return PotionType.THICK;
 			case "night vision":
 			case "darkvision":
 				return PotionType.NIGHT_VISION;
@@ -156,8 +145,6 @@ public abstract class PotionEffectUtils {
 				return PotionType.STRENGTH;
 			case "weakness":
 				return PotionType.WEAKNESS;
-			case "luck":
-				return PotionType.LUCK;
 		}
 		
 		return null;

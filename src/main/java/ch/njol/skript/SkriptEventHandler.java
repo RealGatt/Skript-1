@@ -19,16 +19,12 @@
  */
 package ch.njol.skript;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.NoSuchElementException;
-import java.util.Set;
-
+import ch.njol.skript.ScriptLoader.ScriptInfo;
+import ch.njol.skript.command.Commands;
+import ch.njol.skript.lang.SelfRegisteringSkriptEvent;
+import ch.njol.skript.lang.Trigger;
+import ch.njol.skript.lang.function.Functions;
+import ch.njol.skript.timings.SkriptTimings;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
@@ -38,14 +34,10 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.server.ServerCommandEvent;
 import org.bukkit.plugin.EventExecutor;
-import javax.annotation.Nullable;
 
-import ch.njol.skript.ScriptLoader.ScriptInfo;
-import ch.njol.skript.command.Commands;
-import ch.njol.skript.lang.SelfRegisteringSkriptEvent;
-import ch.njol.skript.lang.Trigger;
-import ch.njol.skript.lang.function.Functions;
-import ch.njol.skript.timings.SkriptTimings;
+import javax.annotation.Nullable;
+import java.io.File;
+import java.util.*;
 
 /**
  * @author Peter Güttinger

@@ -19,12 +19,6 @@
  */
 package ch.njol.skript.events;
 
-import java.util.ArrayList;
-import java.util.Collection;
-
-import org.bukkit.event.Event;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.events.bukkit.SkriptStartEvent;
 import ch.njol.skript.events.bukkit.SkriptStopEvent;
@@ -33,6 +27,11 @@ import ch.njol.skript.lang.SelfRegisteringSkriptEvent;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
 import ch.njol.skript.lang.Trigger;
 import ch.njol.util.coll.CollectionUtils;
+import org.bukkit.event.Event;
+
+import javax.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.Collection;
 
 /**
  * @author Peter Güttinger

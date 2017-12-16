@@ -19,10 +19,6 @@
  */
 package ch.njol.skript.effects;
 
-import org.bukkit.entity.Entity;
-import org.bukkit.event.Event;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.bukkitutil.PassengerUtils;
 import ch.njol.skript.doc.Description;
@@ -34,7 +30,10 @@ import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
 import ch.njol.util.Kleenean;
-import ch.njol.util.coll.CollectionUtils;
+import org.bukkit.entity.Entity;
+import org.bukkit.event.Event;
+
+import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger

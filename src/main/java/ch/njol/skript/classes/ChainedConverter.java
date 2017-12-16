@@ -19,9 +19,9 @@
  */
 package ch.njol.skript.classes;
 
-import javax.annotation.Nullable;
-
 import ch.njol.skript.registrations.Converters;
+
+import javax.annotation.Nullable;
 
 /**
  * Used to chain convertes to build a single converter. This is automatically created when a new converter is added.

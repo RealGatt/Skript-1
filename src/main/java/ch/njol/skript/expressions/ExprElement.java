@@ -19,12 +19,6 @@
  */
 package ch.njol.skript.expressions;
 
-import java.lang.reflect.Array;
-import java.util.Iterator;
-
-import org.bukkit.event.Event;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.doc.Description;
 import ch.njol.skript.doc.Examples;
@@ -36,6 +30,11 @@ import ch.njol.skript.lang.SkriptParser.ParseResult;
 import ch.njol.skript.lang.util.SimpleExpression;
 import ch.njol.util.Kleenean;
 import ch.njol.util.coll.CollectionUtils;
+import org.bukkit.event.Event;
+
+import javax.annotation.Nullable;
+import java.lang.reflect.Array;
+import java.util.Iterator;
 
 /**
  * @author Peter Güttinger

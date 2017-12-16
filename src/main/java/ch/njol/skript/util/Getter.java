@@ -19,9 +19,9 @@
  */
 package ch.njol.skript.util;
 
-import javax.annotation.Nullable;
-
 import ch.njol.skript.classes.Converter;
+
+import javax.annotation.Nullable;
 
 /**
  * Used to get a specific value from instances of some type.

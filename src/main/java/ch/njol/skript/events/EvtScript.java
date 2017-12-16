@@ -19,15 +19,15 @@
  */
 package ch.njol.skript.events;
 
-import org.bukkit.event.Event;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.events.bukkit.ScriptEvent;
 import ch.njol.skript.lang.Literal;
 import ch.njol.skript.lang.SelfRegisteringSkriptEvent;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
 import ch.njol.skript.lang.Trigger;
+import org.bukkit.event.Event;
+
+import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger

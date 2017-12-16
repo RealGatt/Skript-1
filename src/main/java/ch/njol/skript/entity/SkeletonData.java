@@ -19,14 +19,14 @@
  */
 package ch.njol.skript.entity;
 
-import org.bukkit.entity.Skeleton;
-import org.bukkit.entity.Skeleton.SkeletonType;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.SkriptAPIException;
 import ch.njol.skript.lang.Literal;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
+import org.bukkit.entity.Skeleton;
+import org.bukkit.entity.Skeleton.SkeletonType;
+
+import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger
@@ -51,7 +51,7 @@ public class SkeletonData extends EntityData<Skeleton> {
 	}
 	
 	private int type;
-	public static final int NORMAL = 0, WITHER = 1, STRAY = 2, LAST_INDEX = STRAY;
+	public static final int NORMAL = 0, WITHER = 1, LAST_INDEX = WITHER;
 	
 	public SkeletonData() {}
 	
@@ -63,10 +63,6 @@ public class SkeletonData extends EntityData<Skeleton> {
 	
 	public boolean isWither() {
 		return type == WITHER;
-	}
-	
-	public boolean isStray() {
-		return type == STRAY;
 	}
 	
 	@Override
@@ -82,8 +78,6 @@ public class SkeletonData extends EntityData<Skeleton> {
 		
 		if (hasWither && e.getSkeletonType() == SkeletonType.WITHER)
 			type = WITHER;
-		if (hasStray && e.getSkeletonType() == SkeletonType.STRAY)
-			type = STRAY;
 		return true;
 	}
 	
@@ -107,9 +101,6 @@ public class SkeletonData extends EntityData<Skeleton> {
 			case WITHER:
 				e.setSkeletonType(SkeletonType.WITHER);
 				break;
-			case STRAY:
-				e.setSkeletonType(SkeletonType.STRAY);
-				break;
 			default:
 				e.setSkeletonType(SkeletonType.NORMAL);
 		}
@@ -120,8 +111,6 @@ public class SkeletonData extends EntityData<Skeleton> {
 		switch (type) {
 			case WITHER:
 				return e.getSkeletonType() == SkeletonType.WITHER;
-			case STRAY:
-				return e.getSkeletonType() == SkeletonType.STRAY;
 			default:
 				return e.getSkeletonType() == SkeletonType.NORMAL;
 		}

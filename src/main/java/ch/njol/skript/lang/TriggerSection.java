@@ -19,13 +19,12 @@
  */
 package ch.njol.skript.lang;
 
-import java.util.List;
-
-import org.bukkit.event.Event;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.ScriptLoader;
 import ch.njol.skript.config.SectionNode;
+import org.bukkit.event.Event;
+
+import javax.annotation.Nullable;
+import java.util.List;
 
 /**
  * Represents a section of a trigger, e.g. a conditional or a loop

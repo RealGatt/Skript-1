@@ -19,22 +19,21 @@
  */
 package ch.njol.skript.hooks.regions;
 
+import ch.njol.skript.hooks.Hook;
+import ch.njol.skript.hooks.regions.classes.Region;
+import ch.njol.skript.variables.Variables;
+import ch.njol.yggdrasil.ClassResolver;
+import org.bukkit.Location;
+import org.bukkit.World;
+import org.bukkit.entity.Player;
+import org.bukkit.plugin.Plugin;
+
+import javax.annotation.Nullable;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
-
-import org.bukkit.Location;
-import org.bukkit.World;
-import org.bukkit.entity.Player;
-import org.bukkit.plugin.Plugin;
-import javax.annotation.Nullable;
-
-import ch.njol.skript.hooks.Hook;
-import ch.njol.skript.hooks.regions.classes.Region;
-import ch.njol.skript.variables.Variables;
-import ch.njol.yggdrasil.ClassResolver;
 
 /**
  * @author Peter Güttinger

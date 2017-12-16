@@ -19,19 +19,14 @@
  */
 package ch.njol.skript.localization;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.aliases.Aliases;
 import ch.njol.skript.localization.Language.LanguageListenerPriority;
 import ch.njol.util.NonNullPair;
 import ch.njol.util.StringUtils;
+
+import javax.annotation.Nullable;
+import java.util.*;
 
 /**
  * @author Peter Güttinger

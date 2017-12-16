@@ -19,12 +19,11 @@
  */
 package ch.njol.util;
 
+import javax.annotation.Nullable;
 import java.util.Iterator;
 import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger

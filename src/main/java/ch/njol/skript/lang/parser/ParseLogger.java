@@ -19,17 +19,15 @@
  */
 package ch.njol.skript.lang.parser;
 
-import java.util.Collection;
-import java.util.List;
-
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.config.Node;
 import ch.njol.skript.log.ErrorQuality;
 import ch.njol.skript.log.LogEntry;
 import ch.njol.skript.log.LogHandler;
 import ch.njol.skript.log.ParseLogHandler;
+
+import javax.annotation.Nullable;
+import java.util.Collection;
 
 /**
  * Interface for logging during parsing.

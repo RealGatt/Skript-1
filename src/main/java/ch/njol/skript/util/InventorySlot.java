@@ -19,16 +19,15 @@
  */
 package ch.njol.skript.util;
 
+import ch.njol.skript.bukkitutil.PlayerUtils;
+import ch.njol.skript.registrations.Classes;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
-import javax.annotation.Nullable;
 
-import ch.njol.skript.Skript;
-import ch.njol.skript.bukkitutil.PlayerUtils;
-import ch.njol.skript.registrations.Classes;
+import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger
@@ -73,8 +72,6 @@ public class InventorySlot extends Slot {
 
 	@Override
 	public boolean isSameSlot(Slot o) {
-		if (o instanceof EquipmentSlot)
-			return o.isSameSlot(this); // Reverse call to avoid code copy-paste
 		return this.index == ((InventorySlot) o).getIndex();
 	}
 	

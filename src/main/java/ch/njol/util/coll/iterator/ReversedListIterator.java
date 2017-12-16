@@ -19,10 +19,9 @@
  */
 package ch.njol.util.coll.iterator;
 
+import javax.annotation.Nullable;
 import java.util.List;
 import java.util.ListIterator;
-
-import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger

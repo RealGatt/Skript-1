@@ -19,6 +19,8 @@
  */
 package ch.njol.yggdrasil;
 
+import javax.annotation.Nullable;
+import javax.annotation.concurrent.ThreadSafe;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -26,10 +28,6 @@ import java.util.Map;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
-
-import javax.annotation.concurrent.ThreadSafe;
-
-import javax.annotation.Nullable;
 
 /**
  * A class that acts as a "pseudo-enum", i.e. a class which only has immutable, (public,) final static instances, which can be identified by their unique name. The instances don't

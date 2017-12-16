@@ -25,13 +25,10 @@ import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Trigger;
 import ch.njol.skript.lang.TriggerItem;
 import ch.njol.skript.timings.SkriptTimings;
-
 import org.bukkit.Bukkit;
 import org.bukkit.event.Event;
-import javax.annotation.Nullable;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import javax.annotation.Nullable;
 
 /**
  * Effects that extend this class are ran asynchronously. Next trigger item will be ran

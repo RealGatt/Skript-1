@@ -19,35 +19,9 @@
  */
 package ch.njol.skript.doc;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.nio.charset.Charset;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Scanner;
-import java.util.regex.Matcher;
-
-import javax.annotation.Nullable;
-
-import com.bekvon.bukkit.residence.commands.info;
-import com.google.common.base.Joiner;
-import com.google.common.collect.Lists;
-import com.google.common.io.Files;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.classes.ClassInfo;
-import ch.njol.skript.lang.Condition;
-import ch.njol.skript.lang.Effect;
-import ch.njol.skript.lang.ExpressionInfo;
-import ch.njol.skript.lang.SkriptEventInfo;
-import ch.njol.skript.lang.SyntaxElementInfo;
+import ch.njol.skript.lang.*;
 import ch.njol.skript.lang.function.Functions;
 import ch.njol.skript.lang.function.JavaFunction;
 import ch.njol.skript.lang.function.Parameter;
@@ -56,6 +30,16 @@ import ch.njol.skript.util.Utils;
 import ch.njol.util.Callback;
 import ch.njol.util.NonNullPair;
 import ch.njol.util.StringUtils;
+import com.google.common.base.Joiner;
+import com.google.common.collect.Lists;
+import com.google.common.io.Files;
+
+import javax.annotation.Nullable;
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.util.*;
+import java.util.regex.Matcher;
 
 /**
  * Generates HTML based Skript documentation.

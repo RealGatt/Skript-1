@@ -19,13 +19,11 @@
  */
 package ch.njol.util.coll;
 
+import javax.annotation.Nullable;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
-
-import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger

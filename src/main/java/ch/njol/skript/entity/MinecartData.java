@@ -19,20 +19,19 @@
  */
 package ch.njol.skript.entity;
 
-import java.util.ArrayList;
-
+import ch.njol.skript.Skript;
+import ch.njol.skript.lang.Literal;
+import ch.njol.skript.lang.SkriptParser.ParseResult;
+import ch.njol.skript.util.Utils;
+import ch.njol.skript.variables.Variables;
 import org.bukkit.entity.Minecart;
 import org.bukkit.entity.minecart.ExplosiveMinecart;
 import org.bukkit.entity.minecart.HopperMinecart;
 import org.bukkit.entity.minecart.RideableMinecart;
 import org.bukkit.entity.minecart.SpawnerMinecart;
-import javax.annotation.Nullable;
 
-import ch.njol.skript.Skript;
-import ch.njol.skript.lang.Literal;
-import ch.njol.skript.lang.SkriptParser.ParseResult;
-import ch.njol.skript.variables.Variables;
-import ch.njol.skript.util.Utils;
+import javax.annotation.Nullable;
+import java.util.ArrayList;
 
 /**
  * @author Peter Güttinger

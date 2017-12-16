@@ -19,13 +19,12 @@
  */
 package ch.njol.skript.config;
 
+import javax.annotation.Nullable;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
-
-import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger

@@ -19,11 +19,11 @@
  */
 package ch.njol.skript.lang;
 
+import org.bukkit.event.Event;
+
+import javax.annotation.Nullable;
 import java.io.File;
 import java.util.List;
-
-import org.bukkit.event.Event;
-import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger

@@ -19,9 +19,9 @@
  */
 package ch.njol.skript.lang.function;
 
-import javax.annotation.Nullable;
-
 import ch.njol.skript.classes.ClassInfo;
+
+import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger

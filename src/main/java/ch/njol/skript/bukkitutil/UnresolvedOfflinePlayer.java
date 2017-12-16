@@ -19,20 +19,19 @@
  */
 package ch.njol.skript.bukkitutil;
 
-import java.util.Map;
-import java.util.UUID;
-import java.util.concurrent.LinkedBlockingQueue;
-
-import org.bukkit.Bukkit;
-import org.bukkit.Location;
-import org.bukkit.OfflinePlayer;
-import org.bukkit.entity.Player;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.command.Commands;
 import ch.njol.util.Callback;
 import ch.njol.util.Closeable;
+import org.bukkit.Bukkit;
+import org.bukkit.Location;
+import org.bukkit.OfflinePlayer;
+import org.bukkit.entity.Player;
+
+import javax.annotation.Nullable;
+import java.util.Map;
+import java.util.UUID;
+import java.util.concurrent.LinkedBlockingQueue;
 
 /**
  * An {@link OfflinePlayer} that has only a name but no UUID set.
@@ -87,13 +86,19 @@ public class UnresolvedOfflinePlayer implements OfflinePlayer {
 	 * @param name The player's name
 	 * @param callback A callback that will be run when the player has been resolved. It will be called on the resolver thread which should not be blocked.
 	 */
+
 	public UnresolvedOfflinePlayer(final String name, final Callback<Void, OfflinePlayer> callback) {
 		this.name = name;
 		this.callback = callback;
 		
 		toResolve.add(this);
 	}
-	
+
+	@Override
+	public void setBanned(boolean banned) {
+
+	}
+
 	@Override
 	public String getName() {
 		return bukkitOfflinePlayer != null ? bukkitOfflinePlayer.getName() : name;

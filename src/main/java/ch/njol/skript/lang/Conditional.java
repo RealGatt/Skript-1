@@ -19,10 +19,10 @@
  */
 package ch.njol.skript.lang;
 
-import org.bukkit.event.Event;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.config.SectionNode;
+import org.bukkit.event.Event;
+
+import javax.annotation.Nullable;
 
 /**
  * Represents a conditional trigger section.

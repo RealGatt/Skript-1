@@ -19,20 +19,14 @@
  */
 package ch.njol.skript.config;
 
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.PrintWriter;
+import ch.njol.skript.Skript;
+import ch.njol.skript.config.validate.SectionValidator;
+
+import javax.annotation.Nullable;
+import java.io.*;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.util.HashMap;
-
-import javax.annotation.Nullable;
-
-import ch.njol.skript.Skript;
-import ch.njol.skript.config.validate.SectionValidator;
 
 /**
  * Represents a config file.

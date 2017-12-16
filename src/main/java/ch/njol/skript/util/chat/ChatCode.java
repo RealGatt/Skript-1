@@ -21,10 +21,10 @@
 
 package ch.njol.skript.util.chat;
 
-import javax.annotation.Nullable;
+import ch.njol.skript.util.chat.MessageComponent.ClickEvent;
+import ch.njol.skript.util.chat.MessageComponent.HoverEvent;
 
-import ch.njol.skript.lang.VariableString;
-import ch.njol.skript.util.chat.MessageComponent.*;
+import javax.annotation.Nullable;
 
 /**
  * Chat codes; includes color codes (<a href="http://wiki.vg/Chat#Colors">reference</a>)

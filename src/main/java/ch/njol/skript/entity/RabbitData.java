@@ -19,15 +19,10 @@
  */
 package ch.njol.skript.entity;
 
-import java.util.HashMap;
-
-import javax.annotation.Nullable;
-
-import org.bukkit.entity.Rabbit;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Literal;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
+import org.bukkit.entity.Rabbit;
 
 
 public class RabbitData extends EntityData<Rabbit> {

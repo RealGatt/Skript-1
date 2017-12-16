@@ -19,10 +19,6 @@
  */
 package ch.njol.skript.conditions;
 
-import org.bukkit.entity.LivingEntity;
-import org.bukkit.event.Event;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.aliases.ItemType;
 import ch.njol.skript.doc.Description;
@@ -34,6 +30,10 @@ import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
 import ch.njol.util.Checker;
 import ch.njol.util.Kleenean;
+import org.bukkit.entity.LivingEntity;
+import org.bukkit.event.Event;
+
+import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger
@@ -90,7 +90,7 @@ public class CondItemInHand extends Condition {
 					@Override
 					public boolean check(final ItemType type) {
 						if (Skript.isRunningMinecraft(1, 9))
-							return (offTool ? type.isOfType(en.getEquipment().getItemInOffHand()) : type.isOfType(en.getEquipment().getItemInMainHand()));
+							return (type.isOfType(en.getEquipment().getItemInHand()));
 						else
 							return type.isOfType(en.getEquipment().getItemInHand());
 					}

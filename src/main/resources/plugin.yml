@@ -27,7 +27,7 @@ authors: [Gatt]
 
 main: ch.njol.skript.Skript
 
-version: @version@
+version: 3.0
 
 commands:
     skript:

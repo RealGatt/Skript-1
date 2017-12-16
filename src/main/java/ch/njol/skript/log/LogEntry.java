@@ -19,13 +19,12 @@
  */
 package ch.njol.skript.log;
 
-import java.util.logging.Level;
-
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.config.Config;
 import ch.njol.skript.config.Node;
+
+import javax.annotation.Nullable;
+import java.util.logging.Level;
 
 /**
  * @author Peter Güttinger

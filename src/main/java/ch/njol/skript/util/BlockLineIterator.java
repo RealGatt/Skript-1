@@ -19,16 +19,16 @@
  */
 package ch.njol.skript.util;
 
-import org.bukkit.Location;
-import org.bukkit.block.Block;
-import org.bukkit.util.BlockIterator;
-import org.bukkit.util.Vector;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.util.Math2;
 import ch.njol.util.NullableChecker;
 import ch.njol.util.coll.iterator.StoppableIterator;
+import org.bukkit.Location;
+import org.bukkit.block.Block;
+import org.bukkit.util.BlockIterator;
+import org.bukkit.util.Vector;
+
+import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger

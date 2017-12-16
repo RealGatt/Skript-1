@@ -19,10 +19,10 @@
  */
 package ch.njol.skript.classes;
 
-import javax.annotation.Nullable;
-
 import ch.njol.yggdrasil.ClassResolver;
 import ch.njol.yggdrasil.Fields;
+
+import javax.annotation.Nullable;
 
 /**
  * Mainly kept for backwards compatibility, but also serves as {@link ClassResolver} for enums.

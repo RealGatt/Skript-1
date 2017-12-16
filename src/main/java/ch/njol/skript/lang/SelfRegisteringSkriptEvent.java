@@ -19,9 +19,8 @@
  */
 package ch.njol.skript.lang;
 
-import org.bukkit.event.Event;
-
 import ch.njol.skript.config.Config;
+import org.bukkit.event.Event;
 
 /**
  * @author Peter Güttinger

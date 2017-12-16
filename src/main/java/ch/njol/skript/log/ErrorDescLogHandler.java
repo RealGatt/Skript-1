@@ -19,11 +19,10 @@
  */
 package ch.njol.skript.log;
 
-import java.util.logging.Level;
+import ch.njol.skript.Skript;
 
 import javax.annotation.Nullable;
-
-import ch.njol.skript.Skript;
+import java.util.logging.Level;
 
 /**
  * Does nothing but print messages before the first error encountered and/or a message at the end if no error were encountered.

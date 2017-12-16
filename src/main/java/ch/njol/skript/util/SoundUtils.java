@@ -20,6 +20,7 @@
 package ch.njol.skript.util;
 
 import org.bukkit.Sound;
+
 import javax.annotation.Nullable;
 
 /**

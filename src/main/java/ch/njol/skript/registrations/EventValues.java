@@ -19,16 +19,15 @@
  */
 package ch.njol.skript.registrations;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.bukkit.event.Event;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.classes.Converter;
 import ch.njol.skript.expressions.base.EventValueExpression;
 import ch.njol.skript.util.Getter;
+import org.bukkit.event.Event;
+
+import javax.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Peter Güttinger

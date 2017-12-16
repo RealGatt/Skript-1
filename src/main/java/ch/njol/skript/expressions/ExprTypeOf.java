@@ -19,10 +19,6 @@
  */
 package ch.njol.skript.expressions;
 
-import org.bukkit.inventory.Inventory;
-import org.bukkit.inventory.ItemStack;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.doc.Description;
 import ch.njol.skript.doc.Examples;
 import ch.njol.skript.doc.Name;
@@ -31,7 +27,10 @@ import ch.njol.skript.entity.EntityData;
 import ch.njol.skript.expressions.base.SimplePropertyExpression;
 import ch.njol.skript.lang.util.ConvertedExpression;
 import ch.njol.skript.registrations.Converters;
-import edu.umd.cs.findbugs.ba.bcp.New;
+import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
+
+import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger

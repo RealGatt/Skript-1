@@ -19,15 +19,12 @@
  */
 package ch.njol.skript.hooks.biomes;
 
-import java.io.IOException;
-
-import org.bukkit.block.Biome;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.hooks.Hook;
 import ch.njol.skript.hooks.biomes.BiomeMapUtil.To19Mapping;
 import ch.njol.skript.util.EnumUtils;
-import ch.njol.skript.util.VisualEffect;
+
+import java.io.IOException;
 
 /**
  * Hook for multi version biomes.

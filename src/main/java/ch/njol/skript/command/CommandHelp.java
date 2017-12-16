@@ -19,18 +19,18 @@
  */
 package ch.njol.skript.command;
 
-import static org.bukkit.ChatColor.*;
-
-import java.util.LinkedHashMap;
-import java.util.Map.Entry;
-
-import org.bukkit.command.CommandSender;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.localization.ArgsMessage;
 import ch.njol.skript.localization.Message;
 import ch.njol.skript.util.Color;
+import org.bukkit.command.CommandSender;
+
+import javax.annotation.Nullable;
+import java.util.LinkedHashMap;
+import java.util.Map.Entry;
+
+import static org.bukkit.ChatColor.GRAY;
+import static org.bukkit.ChatColor.RESET;
 
 /**
  * @author Peter Güttinger

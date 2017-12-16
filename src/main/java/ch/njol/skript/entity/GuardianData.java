@@ -19,11 +19,10 @@
  */
 package ch.njol.skript.entity;
 
-import org.bukkit.entity.Guardian;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Literal;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
+import org.bukkit.entity.Guardian;
 
 
 public class GuardianData extends EntityData<Guardian> {

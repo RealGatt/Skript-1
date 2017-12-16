@@ -19,24 +19,18 @@
  */
 package ch.njol.skript.bukkitutil;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
-
+import ch.njol.skript.Skript;
+import ch.njol.skript.util.Task;
+import com.google.common.collect.ImmutableList;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
+
 import javax.annotation.Nullable;
-
-import com.google.common.collect.ImmutableList;
-
-import ch.njol.skript.Skript;
-import ch.njol.skript.util.Task;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.*;
 
 /**
  * TODO check all updates and find out which ones are not required
@@ -115,7 +109,6 @@ public abstract class PlayerUtils {
 		boolean special;
 		switch (food) {
 			case GOLDEN_APPLE:
-			case CHORUS_FRUIT:
 				special = true;
 				break;
 				//$CASES-OMITTED$

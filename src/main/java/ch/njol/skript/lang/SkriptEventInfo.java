@@ -19,12 +19,11 @@
  */
 package ch.njol.skript.lang;
 
-import java.util.Locale;
-
-import org.bukkit.event.Event;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.SkriptAPIException;
+import org.bukkit.event.Event;
+
+import javax.annotation.Nullable;
+import java.util.Locale;
 
 public final class SkriptEventInfo<E extends SkriptEvent> extends SyntaxElementInfo<E> {
 	

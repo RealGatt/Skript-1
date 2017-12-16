@@ -19,11 +19,11 @@
  */
 package ch.njol.skript.entity;
 
-import org.bukkit.entity.Wolf;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.lang.Literal;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
+import org.bukkit.entity.Wolf;
+
+import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger

@@ -19,25 +19,8 @@
  */
 package ch.njol.skript;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.concurrent.locks.LockSupport;
-
-import org.bukkit.event.EventPriority;
-import org.eclipse.jdt.annotation.NonNull;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.classes.Converter;
-import ch.njol.skript.config.Config;
-import ch.njol.skript.config.EnumParser;
-import ch.njol.skript.config.Option;
-import ch.njol.skript.config.OptionSection;
-import ch.njol.skript.config.SectionNode;
+import ch.njol.skript.config.*;
 import ch.njol.skript.localization.Language;
 import ch.njol.skript.log.SkriptLogger;
 import ch.njol.skript.log.Verbosity;
@@ -48,6 +31,16 @@ import ch.njol.skript.util.Timespan;
 import ch.njol.skript.util.chat.ChatMessages;
 import ch.njol.skript.util.chat.LinkParseMode;
 import ch.njol.util.Setter;
+import org.bukkit.event.EventPriority;
+
+import javax.annotation.Nullable;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collection;
 
 /**
  * Important: don't save values from the config, a '/skript reload config/configs/all' won't work correctly otherwise!

@@ -19,9 +19,8 @@
  */
 package ch.njol.util;
 
-import java.util.Collection;
-
 import javax.annotation.Nullable;
+import java.util.Collection;
 
 /**
  * @author Peter Güttinger

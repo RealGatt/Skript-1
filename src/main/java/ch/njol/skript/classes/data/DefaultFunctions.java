@@ -19,15 +19,6 @@
  */
 package ch.njol.skript.classes.data;
 
-import java.util.Calendar;
-
-import org.bukkit.Bukkit;
-import org.bukkit.Location;
-import org.bukkit.World;
-import org.bukkit.util.Vector;
-import javax.annotation.Nullable;
-
-import ch.njol.skript.Skript;
 import ch.njol.skript.classes.ClassInfo;
 import ch.njol.skript.expressions.base.EventValueExpression;
 import ch.njol.skript.lang.function.FunctionEvent;
@@ -39,6 +30,13 @@ import ch.njol.skript.registrations.Classes;
 import ch.njol.skript.util.Date;
 import ch.njol.util.Math2;
 import ch.njol.util.StringUtils;
+import org.bukkit.Bukkit;
+import org.bukkit.Location;
+import org.bukkit.World;
+import org.bukkit.util.Vector;
+
+import javax.annotation.Nullable;
+import java.util.Calendar;
 
 /**
  * FIXME generate/write documentation
@@ -368,7 +366,7 @@ public class DefaultFunctions {
 				"A time zone and DST offset can be specified as well (in minutes), if they are left out the server's time zone and DST offset are used (the created date will not retain this information).")
 				.examples("date(2014, 10, 1) # 0:00, 1st October 2014", "date(1990, 3, 5, 14, 30) # 14:30, 5th May 1990", "date(1999, 12, 31, 23, 59, 59, 999, -3*60, 0) # almost year 2000 in parts of Brazil (-3 hours offset, no DST)")
 				.since("2.2"));
-		
+
 		Functions.registerFunction(new JavaFunction<Vector>("vector", new Parameter[] {
 				new Parameter<>("x", numberClass, true, null), new Parameter<>("y", numberClass, true, null), new Parameter<>("z", numberClass, true, null)
 		}, Classes.getExactClassInfo(Vector.class), true) {
@@ -378,33 +376,11 @@ public class DefaultFunctions {
 			public Vector[] execute(FunctionEvent e, Object[][] params) {
 				return new Vector[] {new Vector(((Number)params[0][0]).doubleValue(), ((Number)params[1][0]).doubleValue(), ((Number)params[2][0]).doubleValue())};
 			}
-			
+
 		}.description("Creates a new vector, which can be used with various expressions, effects and functions.")
 				.examples("vector(0, 0, 0)")
 				.since("2.2-dev23"));
-		
-		Functions.registerFunction(new JavaFunction<Long>("calcExperience", new Parameter[] {
-				new Parameter<>("level", longClass, true, null)},
-				longClass, true) {
 
-			@Override
-			public Long[] execute(FunctionEvent e, Object[][] params) {
-				long level = (long) params[0][0];
-				long exp = 0;
-			    if (level <= 0)
-			        exp = 0;
-			    else if (level >= 1 && level <= 15)
-			        exp = level * level + 6 * level;
-			    else if (level >= 16 && level <= 30) // Truncating decimal parts probably works
-			        exp = (int) (2.5 * level * level - 40.5 * level - 360);
-			    else // Half experience points do not exist, anyway
-			        exp = (int) (4.5 * level * level - 162.5 * level - 2220);
-				
-				return new Long[] {exp};
-			}
-			
-		}.description("Calculates experience needed to achieve given level in Minecraft.")
-				.since("2.2-dev32"));
 		
 	}
 	

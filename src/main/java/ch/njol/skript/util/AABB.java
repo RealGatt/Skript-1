@@ -19,18 +19,17 @@
  */
 package ch.njol.skript.util;
 
-import java.util.Iterator;
-import java.util.NoSuchElementException;
-
+import ch.njol.skript.Skript;
+import ch.njol.util.Math2;
 import org.bukkit.Chunk;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.util.Vector;
-import javax.annotation.Nullable;
 
-import ch.njol.skript.Skript;
-import ch.njol.util.Math2;
+import javax.annotation.Nullable;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 /**
  * AABB = Axis-Aligned Bounding Box

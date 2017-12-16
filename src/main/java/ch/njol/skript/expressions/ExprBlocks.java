@@ -19,14 +19,6 @@
  */
 package ch.njol.skript.expressions;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-
-import org.bukkit.Location;
-import org.bukkit.block.Block;
-import org.bukkit.event.Event;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.SkriptConfig;
 import ch.njol.skript.doc.Description;
@@ -42,6 +34,13 @@ import ch.njol.skript.util.Direction;
 import ch.njol.util.Kleenean;
 import ch.njol.util.coll.iterator.ArrayIterator;
 import ch.njol.util.coll.iterator.IteratorIterable;
+import org.bukkit.Location;
+import org.bukkit.block.Block;
+import org.bukkit.event.Event;
+
+import javax.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * @author Peter Güttinger

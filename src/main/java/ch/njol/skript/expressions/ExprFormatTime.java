@@ -19,17 +19,11 @@
  */
 package ch.njol.skript.expressions;
 
-import java.text.SimpleDateFormat;
-
-import org.bukkit.event.Event;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.doc.Description;
 import ch.njol.skript.doc.Examples;
 import ch.njol.skript.doc.Name;
 import ch.njol.skript.doc.Since;
-import ch.njol.skript.expressions.base.SimplePropertyExpression;
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.ExpressionType;
 import ch.njol.skript.lang.Literal;
@@ -37,9 +31,11 @@ import ch.njol.skript.lang.SkriptParser.ParseResult;
 import ch.njol.skript.lang.VariableString;
 import ch.njol.skript.lang.util.SimpleExpression;
 import ch.njol.skript.util.Date;
-import ch.njol.skript.util.Time;
 import ch.njol.util.Kleenean;
-import edu.umd.cs.findbugs.ba.bcp.New;
+import org.bukkit.event.Event;
+
+import javax.annotation.Nullable;
+import java.text.SimpleDateFormat;
 
 @Name("Formatted time")
 @Description("Converts date to human-readable text format. By default, yyyy-MM-dd HH:mm:ss z will be used. For reference, see this "

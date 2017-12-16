@@ -19,16 +19,16 @@
  */
 package ch.njol.skript.entity;
 
-import org.bukkit.entity.Horse;
-import org.bukkit.entity.Horse.Color;
-import org.bukkit.entity.Horse.Style;
-import org.bukkit.entity.Horse.Variant;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Literal;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
 import ch.njol.skript.variables.Variables;
+import org.bukkit.entity.Horse;
+import org.bukkit.entity.Horse.Color;
+import org.bukkit.entity.Horse.Style;
+import org.bukkit.entity.Horse.Variant;
+
+import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger

@@ -19,11 +19,13 @@
  */
 package ch.njol.skript.util.chat;
 
+
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.HoverEvent;
 import net.md_5.bungee.api.chat.TextComponent;
+
 
 /**
  * Converts Skript's chat components into Bungee's BaseComponents which Spigot
@@ -42,8 +44,8 @@ public class BungeeConverter {
 		base.setObfuscated(origin.obfuscated);
 		if (origin.color != null) // TODO this is crappy way to copy *color* over...
 			base.setColor(ChatColor.getByChar(ChatCode.valueOf(origin.color).colorChar));
-		base.setInsertion(origin.insertion);
-		
+		base.addExtra(origin.insertion);
+
 		if (origin.clickEvent != null)
 			base.setClickEvent(new ClickEvent(ClickEvent.Action.valueOf(origin.clickEvent.action.spigotName), origin.clickEvent.value));
 		if (origin.hoverEvent != null)

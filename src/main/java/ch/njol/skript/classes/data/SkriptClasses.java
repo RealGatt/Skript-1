@@ -19,52 +19,29 @@
  */
 package ch.njol.skript.classes.data;
 
-import java.io.NotSerializableException;
+import ch.njol.skript.aliases.Aliases;
+import ch.njol.skript.aliases.ItemData;
+import ch.njol.skript.aliases.ItemType;
+import ch.njol.skript.classes.*;
+import ch.njol.skript.expressions.base.EventValueExpression;
+import ch.njol.skript.lang.ParseContext;
+import ch.njol.skript.lang.util.SimpleLiteral;
+import ch.njol.skript.localization.Noun;
+import ch.njol.skript.localization.RegexMessage;
+import ch.njol.skript.registrations.Classes;
+import ch.njol.skript.util.*;
+import ch.njol.yggdrasil.Fields;
+import org.bukkit.Material;
+import org.bukkit.enchantments.Enchantment;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
+
+import javax.annotation.Nullable;
 import java.io.StreamCorruptedException;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.regex.Pattern;
-
-import ch.njol.skript.Skript;
-import org.bukkit.Material;
-import org.bukkit.enchantments.Enchantment;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
-import javax.annotation.Nullable;
-
-import ch.njol.skript.aliases.Aliases;
-import ch.njol.skript.aliases.ItemData;
-import ch.njol.skript.aliases.ItemType;
-import ch.njol.skript.classes.Arithmetic;
-import ch.njol.skript.classes.Changer;
-import ch.njol.skript.classes.ClassInfo;
-import ch.njol.skript.classes.ConfigurationSerializer;
-import ch.njol.skript.classes.EnumSerializer;
-import ch.njol.skript.classes.Parser;
-import ch.njol.skript.classes.Serializer;
-import ch.njol.skript.classes.YggdrasilSerializer;
-import ch.njol.skript.expressions.base.EventValueExpression;
-import ch.njol.skript.lang.ParseContext;
-import ch.njol.skript.lang.parser.ParserInstance;
-import ch.njol.skript.lang.util.SimpleLiteral;
-import ch.njol.skript.localization.Noun;
-import ch.njol.skript.localization.RegexMessage;
-import ch.njol.skript.registrations.Classes;
-import ch.njol.skript.util.Color;
-import ch.njol.skript.util.Date;
-import ch.njol.skript.util.Direction;
-import ch.njol.skript.util.EnchantmentType;
-import ch.njol.skript.util.Experience;
-import ch.njol.skript.util.Slot;
-import ch.njol.skript.util.StructureType;
-import ch.njol.skript.util.Time;
-import ch.njol.skript.util.Timeperiod;
-import ch.njol.skript.util.Timespan;
-import ch.njol.skript.util.Utils;
-import ch.njol.skript.util.VisualEffect;
-import ch.njol.skript.util.WeatherType;
-import ch.njol.yggdrasil.Fields;
 
 /**
  * @author Peter Güttinger
@@ -881,39 +858,7 @@ public class SkriptClasses {
 						}
 					}
 				}));
-		if (!Skript.isRunningMinecraft(1, 8)) {
-			Classes.registerClass(new ClassInfo<>(VisualEffect.class, "visualeffect")
-					.name("Visual Effect")
-					.description("A visible effect, e.g. particles.")
-					.examples("show wolf hearts on the clicked wolf",
-							"play mob spawner flames at the targeted block to the player")
-					.usage(VisualEffect.getAllNames())
-					.since("2.1")
-					.user("(visual|particle) effects?")
-					.parser(new Parser<VisualEffect>() {
-						@Override
-						@Nullable
-						public VisualEffect parse(final String s, final ParseContext context) {
-							return VisualEffect.parse(s);
-						}
 
-						@Override
-						public String toString(final VisualEffect e, final int flags) {
-							return e.toString(flags);
-						}
-
-						@Override
-						public String toVariableNameString(final VisualEffect e) {
-							return e.toString();
-						}
-
-						@Override
-						public String getVariableNamePattern() {
-							return ".*";
-						}
-					})
-					.serializer(new YggdrasilSerializer<VisualEffect>()));
-		}
 	}
 	
 }

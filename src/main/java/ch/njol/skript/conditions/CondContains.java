@@ -19,10 +19,6 @@
  */
 package ch.njol.skript.conditions;
 
-import org.bukkit.event.Event;
-import org.bukkit.inventory.Inventory;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.SkriptConfig;
 import ch.njol.skript.aliases.ItemType;
@@ -41,6 +37,10 @@ import ch.njol.skript.registrations.Comparators;
 import ch.njol.util.Checker;
 import ch.njol.util.Kleenean;
 import ch.njol.util.StringUtils;
+import org.bukkit.event.Event;
+import org.bukkit.inventory.Inventory;
+
+import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger

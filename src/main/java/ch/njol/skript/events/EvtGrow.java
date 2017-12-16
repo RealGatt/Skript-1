@@ -19,13 +19,6 @@
  */
 package ch.njol.skript.events;
 
-import java.util.Arrays;
-
-import org.bukkit.event.Event;
-import org.bukkit.event.block.BlockGrowEvent;
-import org.bukkit.event.world.StructureGrowEvent;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.aliases.ItemType;
 import ch.njol.skript.lang.Literal;
@@ -34,6 +27,11 @@ import ch.njol.skript.lang.SkriptParser.ParseResult;
 import ch.njol.skript.util.StructureType;
 import ch.njol.util.Checker;
 import ch.njol.util.coll.CollectionUtils;
+import org.bukkit.event.Event;
+import org.bukkit.event.block.BlockGrowEvent;
+import org.bukkit.event.world.StructureGrowEvent;
+
+import javax.annotation.Nullable;
 
 public class EvtGrow extends SkriptEvent {
 	

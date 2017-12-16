@@ -19,10 +19,9 @@
  */
 package ch.njol.yggdrasil;
 
+import javax.annotation.Nullable;
 import java.util.HashMap;
 import java.util.Map;
-
-import javax.annotation.Nullable;
 
 public enum Tag {
 	/** the null reference */

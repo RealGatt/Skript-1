@@ -19,15 +19,15 @@
  */
 package ch.njol.skript.expressions;
 
-import org.bukkit.entity.Player;
-import org.bukkit.inventory.Inventory;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.doc.Description;
 import ch.njol.skript.doc.Examples;
 import ch.njol.skript.doc.Name;
 import ch.njol.skript.doc.Since;
 import ch.njol.skript.expressions.base.SimplePropertyExpression;
+import org.bukkit.entity.Player;
+import org.bukkit.inventory.Inventory;
+
+import javax.annotation.Nullable;
 
 @Name("Open Inventory")
 @Description({"Return the open inventory of a player.",

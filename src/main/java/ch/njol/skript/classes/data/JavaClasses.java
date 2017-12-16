@@ -19,10 +19,6 @@
  */
 package ch.njol.skript.classes.data;
 
-import java.io.StreamCorruptedException;
-
-import javax.annotation.Nullable;
-
 import ch.njol.skript.SkriptConfig;
 import ch.njol.skript.classes.ClassInfo;
 import ch.njol.skript.classes.NumberArithmetic;
@@ -37,6 +33,9 @@ import ch.njol.skript.registrations.Classes;
 import ch.njol.skript.util.Utils;
 import ch.njol.util.StringUtils;
 import ch.njol.yggdrasil.Fields;
+
+import javax.annotation.Nullable;
+import java.io.StreamCorruptedException;
 
 /**
  * @author Peter Güttinger

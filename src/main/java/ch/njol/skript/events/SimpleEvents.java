@@ -19,84 +19,20 @@
  */
 package ch.njol.skript.events;
 
-import org.bukkit.event.block.BlockCanBuildEvent;
-import org.bukkit.event.block.BlockDamageEvent;
-import org.bukkit.event.block.BlockFromToEvent;
-import org.bukkit.event.block.BlockGrowEvent;
-import org.bukkit.event.block.BlockIgniteEvent;
-import org.bukkit.event.block.BlockPhysicsEvent;
-import org.bukkit.event.block.BlockPistonExtendEvent;
-import org.bukkit.event.block.BlockPistonRetractEvent;
-import org.bukkit.event.block.BlockRedstoneEvent;
-import org.bukkit.event.block.BlockSpreadEvent;
-import org.bukkit.event.block.LeavesDecayEvent;
-import org.bukkit.event.block.SignChangeEvent;
-import org.bukkit.event.entity.AreaEffectCloudApplyEvent;
-import org.bukkit.event.entity.CreeperPowerEvent;
-import org.bukkit.event.entity.EntityBreakDoorEvent;
-import org.bukkit.event.entity.EntityCombustEvent;
-import org.bukkit.event.entity.EntityExplodeEvent;
-import org.bukkit.event.entity.EntityPortalEnterEvent;
-import org.bukkit.event.entity.EntityRegainHealthEvent;
-import org.bukkit.event.entity.EntityResurrectEvent;
-import org.bukkit.event.entity.EntityTameEvent;
-import org.bukkit.event.entity.EntityToggleGlideEvent;
-import org.bukkit.event.entity.ExplosionPrimeEvent;
-import org.bukkit.event.entity.FoodLevelChangeEvent;
-import org.bukkit.event.entity.PigZapEvent;
-import org.bukkit.event.entity.ProjectileHitEvent;
-import org.bukkit.event.entity.ProjectileLaunchEvent;
-import org.bukkit.event.entity.SheepRegrowWoolEvent;
-import org.bukkit.event.entity.SlimeSplitEvent;
+import ch.njol.skript.Skript;
+import ch.njol.skript.lang.util.SimpleEvent;
+import org.bukkit.event.block.*;
+import org.bukkit.event.entity.*;
 import org.bukkit.event.inventory.FurnaceBurnEvent;
 import org.bukkit.event.inventory.FurnaceSmeltEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.event.inventory.InventoryOpenEvent;
-import org.bukkit.event.player.PlayerArmorStandManipulateEvent;
-import org.bukkit.event.player.PlayerBedEnterEvent;
-import org.bukkit.event.player.PlayerBedLeaveEvent;
-import org.bukkit.event.player.PlayerBucketEmptyEvent;
-import org.bukkit.event.player.PlayerBucketFillEvent;
-import org.bukkit.event.player.PlayerChangedWorldEvent;
-import org.bukkit.event.player.PlayerEggThrowEvent;
-import org.bukkit.event.player.PlayerFishEvent;
-import org.bukkit.event.player.PlayerInteractAtEntityEvent;
-import org.bukkit.event.player.PlayerItemBreakEvent;
-import org.bukkit.event.player.PlayerItemHeldEvent;
-import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.event.player.PlayerKickEvent;
-import org.bukkit.event.player.PlayerLevelChangeEvent;
-import org.bukkit.event.player.PlayerLoginEvent;
-import org.bukkit.event.player.PlayerPortalEvent;
-import org.bukkit.event.player.PlayerQuitEvent;
-import org.bukkit.event.player.PlayerRespawnEvent;
-import org.bukkit.event.player.PlayerTeleportEvent;
-import org.bukkit.event.player.PlayerToggleSneakEvent;
-import org.bukkit.event.player.PlayerToggleSprintEvent;
-import org.bukkit.event.server.ServerListPingEvent;
-import org.bukkit.event.vehicle.VehicleCreateEvent;
-import org.bukkit.event.vehicle.VehicleDamageEvent;
-import org.bukkit.event.vehicle.VehicleDestroyEvent;
-import org.bukkit.event.vehicle.VehicleEnterEvent;
-import org.bukkit.event.vehicle.VehicleExitEvent;
+import org.bukkit.event.player.*;
+import org.bukkit.event.vehicle.*;
 import org.bukkit.event.weather.LightningStrikeEvent;
-import org.bukkit.event.world.ChunkLoadEvent;
-import org.bukkit.event.world.ChunkPopulateEvent;
-import org.bukkit.event.world.ChunkUnloadEvent;
-import org.bukkit.event.world.PortalCreateEvent;
-import org.bukkit.event.world.SpawnChangeEvent;
-import org.bukkit.event.world.WorldInitEvent;
-import org.bukkit.event.world.WorldLoadEvent;
-import org.bukkit.event.world.WorldSaveEvent;
-import org.bukkit.event.world.WorldUnloadEvent;
+import org.bukkit.event.world.*;
 import org.spigotmc.event.entity.EntityDismountEvent;
 import org.spigotmc.event.entity.EntityMountEvent;
-
-import ch.njol.skript.Skript;
-import ch.njol.skript.SkriptEventHandler;
-import ch.njol.skript.lang.SkriptEvent;
-import ch.njol.skript.lang.util.SimpleEvent;
-import ch.njol.util.coll.CollectionUtils;
 
 /**
  * @author Peter Güttinger
@@ -379,17 +315,6 @@ public class SimpleEvents {
 				.description("Called when a world is unloaded. This event might never be called if you don't have a world management plugin.")
 				.examples("")
 				.since("1.0");
-		if (Skript.classExists("org.bukkit.event.entity.EntityToggleGlideEvent")) {
-			Skript.registerEvent("Gliding State Change", SimpleEvent.class, EntityToggleGlideEvent.class, "(gliding state change|toggling gliding)")
-					.description("Called when an entity toggles glider on or off, or when server toggles gliding state of an entity forcibly.")
-					.examples("on toggling gliding:",
-							"	cancel the event # bad idea, but you CAN do it!")
-					.since("2.2-dev21");
-			Skript.registerEvent("AoE Cloud Effect", SimpleEvent.class, AreaEffectCloudApplyEvent.class, "(area effect|AoE cloud) effect")
-					.description("Called when area effect cloud applies it's potion effect. This happens every 5 ticks by default.")
-					.examples("")
-					.since("2.2-dev21");
-		}
 		Skript.registerEvent("Sheep Regrow Wool", SimpleEvent.class, SheepRegrowWoolEvent.class, "sheep [re]grow[ing] wool")
 				.description("Called when sheep regrows it's sheared wool back.")
 				.examples("")
@@ -406,16 +331,7 @@ public class SimpleEvents {
 				.description("Called when a slime splits. Usually this happens when a big slime dies.")
 				.examples("")
 				.since("2.2-dev26");
-		if (Skript.classExists("org.bukkit.event.entity.EntityResurrectEvent")) {
-			Skript.registerEvent("Resurrect Attempt", SimpleEvent.class, EntityResurrectEvent.class, "[entity] resurrect attempt")
-					.description("Called when an entity dies, always. If they are not holding a totem, this is calcelled - you can, however, uncancel it.")
-					.examples("on resurrect attempt:",
-							"	entity is player",
-							"	entity has permission \"admin.undying\"",
-							"	uncancel the event")
-					.since("2.2-dev28");
-			SkriptEventHandler.listenCancelled.add(EntityResurrectEvent.class); // Listen this even when cancelled
-		}
+
 		Skript.registerEvent("Player World Change", SimpleEvent.class, PlayerChangedWorldEvent.class, "player world change[d]")
 				.description("Called when a player enters a world. Does not work with other entities!")
 				.examples("on player world change:",

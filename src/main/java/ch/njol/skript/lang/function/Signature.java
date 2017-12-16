@@ -19,15 +19,14 @@
  */
 package ch.njol.skript.lang.function;
 
+import ch.njol.skript.classes.ClassInfo;
+import ch.njol.util.NonNullPair;
+
+import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
-
-import javax.annotation.Nullable;
-
-import ch.njol.skript.classes.ClassInfo;
-import ch.njol.util.NonNullPair;
 
 /**
  * Function signature: name, parameter types and a return type.

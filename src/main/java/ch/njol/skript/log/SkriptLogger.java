@@ -19,16 +19,15 @@
  */
 package ch.njol.skript.log;
 
-import java.util.Collection;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import org.bukkit.Bukkit;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.config.Node;
 import ch.njol.skript.log.LogHandler.LogResult;
+import org.bukkit.Bukkit;
+
+import javax.annotation.Nullable;
+import java.util.Collection;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * @author Peter Güttinger

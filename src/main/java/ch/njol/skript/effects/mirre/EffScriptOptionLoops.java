@@ -19,9 +19,6 @@
  */
 package ch.njol.skript.effects.mirre;
 
-import org.bukkit.event.Event;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.ScriptLoader;
 import ch.njol.skript.Skript;
 import ch.njol.skript.doc.Description;
@@ -35,6 +32,9 @@ import ch.njol.skript.lang.SkriptParser.ParseResult;
 import ch.njol.skript.log.ErrorQuality;
 import ch.njol.skript.util.ScriptOptions;
 import ch.njol.util.Kleenean;
+import org.bukkit.event.Event;
+
+import javax.annotation.Nullable;
 
 @Name("Loop Version")
 @Description("Changes loops to emulate given Skript version's behaviour.")

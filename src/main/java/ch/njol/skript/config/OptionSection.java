@@ -19,10 +19,9 @@
  */
 package ch.njol.skript.config;
 
+import javax.annotation.Nullable;
 import java.lang.reflect.Field;
 import java.util.Locale;
-
-import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger

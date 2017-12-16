@@ -19,22 +19,16 @@
  */
 package ch.njol.skript.registrations;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import javax.annotation.Nullable;
-
 import ch.njol.skript.Skript;
 import ch.njol.skript.classes.ChainedConverter;
 import ch.njol.skript.classes.Converter;
 import ch.njol.skript.classes.Converter.ConverterInfo;
 import ch.njol.skript.classes.Converter.ConverterUtils;
 import ch.njol.util.Pair;
+
+import javax.annotation.Nullable;
+import java.lang.reflect.Array;
+import java.util.*;
 
 /**
  * @author Peter Güttinger

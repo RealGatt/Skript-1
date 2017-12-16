@@ -19,13 +19,13 @@
  */
 package ch.njol.skript.lang.util;
 
-import org.bukkit.event.Event;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.SkriptAPIException;
 import ch.njol.skript.lang.Literal;
 import ch.njol.skript.lang.SkriptEvent;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
+import org.bukkit.event.Event;
+
+import javax.annotation.Nullable;
 
 /**
  * A very basic SkriptEvent which returns true for all events (i.e. all registered events).

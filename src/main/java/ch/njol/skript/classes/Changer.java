@@ -19,11 +19,11 @@
  */
 package ch.njol.skript.classes;
 
-import org.bukkit.event.Event;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.classes.data.DefaultChangers;
 import ch.njol.skript.lang.Expression;
+import org.bukkit.event.Event;
+
+import javax.annotation.Nullable;
 
 /**
  * An interface to declare changeable values. All Expressions implement something similar like this by default, but refuse any change if {@link Expression#acceptChange(ChangeMode)}

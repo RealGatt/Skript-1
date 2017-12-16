@@ -19,13 +19,6 @@
  */
 package ch.njol.skript.lang.util;
 
-import java.util.Iterator;
-import java.util.NoSuchElementException;
-
-import org.bukkit.event.Event;
-import javax.annotation.Nullable;
-
-import ch.njol.skript.Skript;
 import ch.njol.skript.classes.Changer;
 import ch.njol.skript.classes.Changer.ChangeMode;
 import ch.njol.skript.classes.ClassInfo;
@@ -37,6 +30,11 @@ import ch.njol.skript.registrations.Converters;
 import ch.njol.util.Checker;
 import ch.njol.util.Kleenean;
 import ch.njol.util.coll.CollectionUtils;
+import org.bukkit.event.Event;
+
+import javax.annotation.Nullable;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 /**
  * Represents a expression converted to another type. This, and not Expression, is the required return type of {@link SimpleExpression#getConvertedExpr(Class...)} because this

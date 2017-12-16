@@ -19,9 +19,14 @@
  */
 package ch.njol.skript.events;
 
-import java.util.ArrayList;
-import java.util.Collection;
-
+import ch.njol.skript.Skript;
+import ch.njol.skript.SkriptConfig;
+import ch.njol.skript.SkriptEventHandler;
+import ch.njol.skript.events.bukkit.ExperienceSpawnEvent;
+import ch.njol.skript.lang.Literal;
+import ch.njol.skript.lang.SelfRegisteringSkriptEvent;
+import ch.njol.skript.lang.SkriptParser.ParseResult;
+import ch.njol.skript.lang.Trigger;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Event;
 import org.bukkit.event.EventException;
@@ -31,16 +36,10 @@ import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.entity.ExpBottleEvent;
 import org.bukkit.event.player.PlayerFishEvent;
 import org.bukkit.plugin.EventExecutor;
-import javax.annotation.Nullable;
 
-import ch.njol.skript.Skript;
-import ch.njol.skript.SkriptConfig;
-import ch.njol.skript.SkriptEventHandler;
-import ch.njol.skript.events.bukkit.ExperienceSpawnEvent;
-import ch.njol.skript.lang.Literal;
-import ch.njol.skript.lang.SelfRegisteringSkriptEvent;
-import ch.njol.skript.lang.SkriptParser.ParseResult;
-import ch.njol.skript.lang.Trigger;
+import javax.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.Collection;
 
 /**
  * @author Peter Güttinger

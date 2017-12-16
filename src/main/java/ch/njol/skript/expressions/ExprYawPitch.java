@@ -19,9 +19,6 @@
  */
 package ch.njol.skript.expressions;
 
-import org.bukkit.Location;
-import org.bukkit.event.Event;
-
 import ch.njol.skript.classes.Changer.ChangeMode;
 import ch.njol.skript.doc.Description;
 import ch.njol.skript.doc.Examples;
@@ -32,6 +29,8 @@ import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
 import ch.njol.util.Kleenean;
 import ch.njol.util.coll.CollectionUtils;
+import org.bukkit.Location;
+import org.bukkit.event.Event;
 
 /**
  * @author Peter Güttinger

@@ -19,12 +19,6 @@
  */
 package ch.njol.skript.expressions;
 
-import java.util.Locale;
-
-import org.bukkit.entity.LivingEntity;
-import org.bukkit.inventory.EntityEquipment;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.doc.Description;
 import ch.njol.skript.doc.Examples;
 import ch.njol.skript.doc.Name;
@@ -33,9 +27,13 @@ import ch.njol.skript.expressions.base.SimplePropertyExpression;
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
 import ch.njol.skript.util.EquipmentSlot;
-import ch.njol.skript.util.EquipmentSlot.EquipSlot;
 import ch.njol.skript.util.Slot;
 import ch.njol.util.Kleenean;
+import org.bukkit.entity.LivingEntity;
+import org.bukkit.inventory.EntityEquipment;
+
+import javax.annotation.Nullable;
+import java.util.Locale;
 
 /**
  * @author Peter Güttinger
@@ -51,10 +49,10 @@ public class ExprArmorSlot extends SimplePropertyExpression<LivingEntity, Slot> 
 	}
 	
 	@SuppressWarnings("null")
-	private EquipSlot slot;
-	
-	private final static EquipSlot[] slots = {EquipSlot.BOOTS, EquipSlot.LEGGINGS, EquipSlot.CHESTPLATE, EquipSlot.HELMET};
-	
+	private EquipmentSlot.EquipSlot slot;
+
+	private final static EquipmentSlot.EquipSlot[] slots = {EquipmentSlot.EquipSlot.BOOTS, EquipmentSlot.EquipSlot.LEGGINGS, EquipmentSlot.EquipSlot.CHESTPLATE, EquipmentSlot.EquipSlot.HELMET};
+
 	@SuppressWarnings("null")
 	@Override
 	public boolean init(final Expression<?>[] exprs, final int matchedPattern, final Kleenean isDelayed, final ParseResult parseResult) {

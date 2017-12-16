@@ -19,13 +19,12 @@
  */
 package ch.njol.skript.lang.function;
 
-import java.util.Arrays;
-
-import org.bukkit.Bukkit;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.classes.ClassInfo;
 import ch.njol.util.coll.CollectionUtils;
+import org.bukkit.Bukkit;
+
+import javax.annotation.Nullable;
+import java.util.Arrays;
 
 /**
  * @author Peter Güttinger

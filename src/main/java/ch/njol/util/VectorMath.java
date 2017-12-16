@@ -20,7 +20,6 @@
 package ch.njol.util;
 
 import org.bukkit.util.Vector;
-import javax.annotation.Nullable;
 
 /**
  * @author bi0qaw

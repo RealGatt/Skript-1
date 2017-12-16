@@ -29,9 +29,9 @@ import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser;
 import ch.njol.util.Kleenean;
 import ch.njol.util.VectorMath;
-
 import org.bukkit.event.Event;
 import org.bukkit.util.Vector;
+
 import javax.annotation.Nullable;
 
 /**

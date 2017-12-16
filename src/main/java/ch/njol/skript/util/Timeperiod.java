@@ -19,9 +19,9 @@
  */
 package ch.njol.skript.util;
 
-import javax.annotation.Nullable;
-
 import ch.njol.yggdrasil.YggdrasilSerializable;
+
+import javax.annotation.Nullable;
 
 /**
  * @author Peter Güttinger

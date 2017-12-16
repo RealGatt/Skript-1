@@ -19,13 +19,12 @@
  */
 package ch.njol.skript.localization;
 
+import ch.njol.skript.Skript;
+
+import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Locale;
-
-import javax.annotation.Nullable;
-
-import ch.njol.skript.Skript;
 
 /**
  * Basic class to get text from the language file(s).

@@ -19,18 +19,6 @@
  */
 package ch.njol.skript;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.Collection;
-import java.util.List;
-
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
-import org.bukkit.command.CommandSender;
-import org.bukkit.util.ChatPaginator;
-import org.bukkit.util.ChatPaginator.ChatPage;
-import javax.annotation.Nullable;
-
 import ch.njol.skript.ScriptLoader.ScriptInfo;
 import ch.njol.skript.Updater.UpdateState;
 import ch.njol.skript.classes.Converter;
@@ -42,12 +30,19 @@ import ch.njol.skript.localization.Language;
 import ch.njol.skript.localization.PluralizingArgsMessage;
 import ch.njol.skript.log.RedirectingLogHandler;
 import ch.njol.skript.log.SkriptLogger;
-import ch.njol.skript.timings.SkriptTimings;
 import ch.njol.skript.util.Color;
 import ch.njol.skript.util.ExceptionUtils;
 import ch.njol.skript.util.FileUtils;
-import ch.njol.skript.util.Utils;
 import ch.njol.util.StringUtils;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandSender;
+
+import javax.annotation.Nullable;
+import java.io.File;
+import java.io.IOException;
+import java.util.Collection;
+import java.util.List;
 
 /*
  *   This file is part of Skript.

@@ -19,13 +19,10 @@
  */
 package ch.njol.skript.bukkitutil;
 
-import java.lang.reflect.Method;
-
+import ch.njol.skript.Skript;
 import org.bukkit.entity.Entity;
 
-import ch.njol.skript.Skript;
-import ch.njol.skript.expressions.ExprPassenger;
-import ch.njol.skript.lang.ExpressionType;
+import java.lang.reflect.Method;
 
 /**
  * @author Peter Güttinger and contributors
@@ -54,15 +51,12 @@ public abstract class PassengerUtils {
 	}
 
 	public static Entity[] getPassenger(Entity e) {
-		if (hasMultiplePassenger()) {
-			return e.getPassengers().toArray(new Entity[0]);
-		} else {
-			try {
-				return new Entity[]{(Entity)getPassenger.invoke(e)};		
-			} catch (final Exception ex) { //I don't think it can happen, but just in case.
-				Skript.exception(ex, "A error occured while trying to get a passenger in version lower than 1.11.2.");
-			} 
+		try {
+			return new Entity[]{(Entity)getPassenger.invoke(e)};
+		} catch (final Exception ex) { //I don't think it can happen, but just in case.
+			Skript.exception(ex, "A error occured while trying to get a passenger in version lower than 1.11.2.");
 		}
+
 		return null;
 	}
 	/**
@@ -74,7 +68,7 @@ public abstract class PassengerUtils {
 		if (vehicle == null || passenger == null)
 			return;
 		if (hasMultiplePassenger()) {
-			vehicle.addPassenger(passenger);
+			vehicle.setPassenger(passenger);
 		} else {
 			try {
 				vehicle.eject();
@@ -92,11 +86,8 @@ public abstract class PassengerUtils {
 	public static void removePassenger(Entity vehicle, Entity passenger){
 		if (vehicle == null || passenger == null)
 			return;
-		if (hasMultiplePassenger()){
-			vehicle.removePassenger(passenger);
-		} else {
-			vehicle.eject();
-		}
+		vehicle.eject();
+
 	}
 	/**
 	 * @return True if it supports multiple passengers
